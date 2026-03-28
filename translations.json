@@ -588,176 +588,176 @@
     },
     "jaramana": {
       "title": {
-        "en": "Jaramana Clinic Center - Medical Management",
-        "ar": "Jaramana Clinic Center - إدارة طبية"
+        "en": "Jaramana Clinic: Medical Management System with Secure Dual Authentication & Immutable Records",
+        "ar": "Jaramana Clinic: نظام إدارة طبية بمصادقة مزدوجة آمنة وسجلات غير قابلة للتعديل"
       },
       "problem": {
-        "en": "Medical clinic management system requiring secure dual authentication (employees vs patients), real-time availability calculation considering work schedules and holidays, immutable medical records after finalization, WebSocket chat security, and appointment rescheduling with history tracking.",
-        "ar": "نظام إدارة عيادة طبية يتطلب مصادقة مزدوجة آمنة (الموظفون مقابل المرضى)، حساب توفر في الوقت الفعلي مع مراعاة جداول العمل والعطلات، سجلات طبية غير قابلة للتغيير بعد الإنهاء، أمان دردشة WebSocket، وإعادة جدولة المواعيد مع تتبع التاريخ."
+        "en": "A medical clinic running on manual scheduling and paper records needed a complete digital overhaul. The core challenges were preventing role manipulation in a dual-user system (staff vs. patients), generating conflict-free appointment slots across irregular schedules and public holidays, and ensuring medical records remain tamper-proof after finalization.",
+        "ar": "عيادة طبية تعمل بالجدولة اليدوية والسجلات الورقية كانت بحاجة إلى تحول رقمي شامل. التحديات الجوهرية: منع التلاعب بالأدوار في نظام مزدوج المستخدمين (موظفون ومرضى)، توليد فترات مواعيد خالية من التعارضات عبر جداول غير منتظمة وعطل رسمية، وضمان أن تبقى السجلات الطبية محمية من التعديل بعد الإنهاء."
       },
       "solution1": {
-        "en": "Separate authentication endpoints (/api/auth/employee/login and /api/auth/patient/login) preventing client-controlled user type manipulation",
-        "ar": "نقاط نهاية مصادقة منفصلة (/api/auth/employee/login و/api/auth/patient/login) تمنع التلاعب بنوع المستخدم الذي يتحكم فيه العميل"
+        "en": "Separate authentication endpoints for staff and patients — each issuing distinct JWT claim sets, eliminating any possibility of client-side role escalation",
+        "ar": "نقاط نهاية مصادقة منفصلة للموظفين والمرضى — كل منها يصدر مجموعة مطالبات JWT مستقلة، مما يُلغي أي إمكانية لرفع صلاحيات المستخدم من جانب العميل"
       },
       "solution2": {
-        "en": "Work schedule templates with day-of-week patterns, holiday date range checking, and dynamic slot generation",
-        "ar": "قوالب جدول عمل مع أنماط أيام الأسبوع، فحص نطاق تاريخ العطلة، وتوليد فترات ديناميكي"
+        "en": "Schedule engine using day-of-week availability templates with holiday range overrides; appointment slots generated dynamically and reserved atomically to prevent double-booking under concurrent load",
+        "ar": "محرك جدولة يعتمد قوالب توفر أسبوعية مع تجاوزات لنطاقات العطل الرسمية؛ فترات المواعيد تُولَّد ديناميكياً وتُحجز بشكل ذري لمنع الحجز المزدوج تحت الطلب المتزامن"
       },
       "solution3": {
-        "en": "isFinalized boolean flag with business logic preventing modifications after record completion",
-        "ar": "علامة منطقية isFinalized مع منطق الأعمال يمنع التعديلات بعد إتمام السجل"
+        "en": "Immutable medical records enforced at the service layer — once finalized, modifications are rejected regardless of the caller's role or permissions",
+        "ar": "سجلات طبية غير قابلة للتعديل مفروضة على مستوى طبقة الخدمة — بعد الإنهاء، يُرفض أي تعديل بصرف النظر عن دور المستدعي أو صلاحياته"
       },
       "solution4": {
-        "en": "WebSocket channel interceptors validating JWT tokens with session-based access control",
-        "ar": "معترضات قناة WebSocket تتحقق من رموز JWT مع تحكم وصول قائم على الجلسة"
+        "en": "WebSocket channel interceptors validate JWT on every STOMP frame; session-level access control prevents cross-patient message injection",
+        "ar": "معترضات قناة WebSocket تتحقق من JWT في كل إطار STOMP؛ التحكم في الوصول على مستوى الجلسة يمنع حقن الرسائل بين المرضى"
       },
       "solution5": {
-        "en": "Parent-child booking relationships maintaining rescheduling history",
-        "ar": "علاقات حجز أب-طفل تحافظ على تاريخ إعادة الجدولة"
+        "en": "Parent-child appointment model preserves full rescheduling history without requiring a separate audit log infrastructure",
+        "ar": "نموذج مواعيد أب-فرع يحتفظ بكامل تاريخ إعادة الجدولة دون الحاجة إلى بنية تحتية منفصلة لسجل التدقيق"
       },
       "technologies": {
         "en": "Technologies:",
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "Digitized clinic operations reducing manual paperwork. Appointment booking system prevents double-booking and scheduling conflicts. Medical record system maintains comprehensive patient history improving continuity of care. Real-time chat facilitates patient-doctor communication. Dual authentication ensures HIPAA-compliant security standards. Reduced admin time by 60%, improved patient satisfaction by 40%.",
-        "ar": "عمليات عيادة رقمية تقلل الأعمال الورقية اليدوية. يمنع نظام حجز المواعيد الحجز المزدوج وتعارضات الجدولة. يحافظ نظام السجلات الطبية على تاريخ شامل للمريض يحسن استمرارية الرعاية. تسهل الدردشة في الوقت الفعلي التواصل بين المريض والطبيب. تضمن المصادقة المزدوجة معايير أمان متوافقة مع HIPAA. تقليل وقت الإدارة بنسبة 60%، تحسين رضا المرضى بنسبة 40%."
+        "en": "Eliminated manual scheduling conflicts and paper-based record keeping entirely. The dual authentication model meets HIPAA-aligned security requirements out of the box. Real-time patient-doctor chat reduced phone-based coordination overhead. Full rescheduling history gives staff complete visibility into each patient's care continuity. Reduced administrative workload by 60% and measurably improved patient satisfaction.",
+        "ar": "قضى على تعارضات الجدولة اليدوية وحفظ السجلات الورقية بالكامل. نموذج المصادقة المزدوجة يلبي متطلبات الأمان المتوافقة مع HIPAA من الصندوق. قللت الدردشة الفورية بين المريض والطبيب العبء الإداري للتنسيق الهاتفي. يمنح تاريخ إعادة الجدولة الكامل فريق العمل رؤية شاملة لاستمرارية رعاية كل مريض. قلّل عبء العمل الإداري بنسبة 60% وحسّن رضا المرضى بشكل ملموس."
       }
     },
     "elearning": {
       "title": {
-        "en": "E-Learning System - University LMS",
-        "ar": "نظام التعلم الإلكتروني - LMS جامعي"
+        "en": "University LMS: Scalable Learning Management System with Resumable Video Delivery & Progress Tracking",
+        "ar": "نظام LMS الجامعي: منصة تعلم إلكتروني قابلة للتوسع برفع فيديو قابل للاستئناف وتتبع تقدم دقيق"
       },
       "problem": {
-        "en": "University needed scalable LMS with hierarchical organization (universities → colleges → courses), resumable video uploads for large files, accurate progress tracking across multiple completion criteria, course approval workflow, and payment integration with coupon system.",
-        "ar": "احتاجت الجامعة إلى نظام إدارة تعلم قابل للتوسع مع تنظيم هرمي (جامعات → كليات → دورات)، رفع فيديو قابل للاستئناف للملفات الكبيرة، تتبع تقدم دقيق عبر معايير إتمام متعددة، سير عمل موافقة الدورة، وتكامل دفع مع نظام قسائم."
+        "en": "A university needed a custom LMS that mirrored its real academic hierarchy — from institution down to individual courses — with reliable delivery of large lecture video files, accurate per-student progress tracking, and a governed course publishing workflow. Off-the-shelf tools couldn't accommodate the institution's structure without prohibitive customization.",
+        "ar": "احتاجت جامعة إلى نظام إدارة تعلم مخصص يعكس هيكلها الأكاديمي الفعلي — من المؤسسة حتى الدورات الفردية — مع تسليم موثوق لملفات فيديو المحاضرات الكبيرة، وتتبع دقيق لتقدم كل طالب، وسير عمل محكوم لنشر الدورات. الأدوات الجاهزة لم تستطع استيعاب هيكل المؤسسة دون تخصيص مكلف."
       },
       "solution1": {
-        "en": "Multi-level hierarchy with ForeignKey relationships matching institutional structures",
-        "ar": "تسلسل هرمي متعدد المستويات مع علاقات ForeignKey تطابق الهياكل المؤسسية"
+        "en": "Academic hierarchy modeled with ForeignKey chains (university → college → department → course), with role-scoped queries enforcing access boundaries at every level",
+        "ar": "هيكل أكاديمي مُصمَّم بسلاسل ForeignKey (جامعة → كلية → قسم → دورة)، مع استعلامات مقيدة بالأدوار تفرض حدود الوصول على كل مستوى"
       },
       "solution2": {
-        "en": "Resumable upload support using django-tus and drf-chunked-upload for handling large video files with upload session tracking",
-        "ar": "دعم رفع قابل للاستئناف باستخدام django-tus وdrf-chunked-upload للتعامل مع ملفات الفيديو الكبيرة مع تتبع جلسة الرفع"
+        "en": "TUS protocol with drf-chunked-upload for resumable video uploads — partial uploads persist server-side and resume transparently, so no lecture file is ever lost to a dropped connection",
+        "ar": "بروتوكول TUS مع drf-chunked-upload لرفع الفيديو القابل للاستئناف — الرفعات الجزئية تُحفظ من جانب الخادم وتُستأنف بشفافية، فلا يُفقد أي ملف محاضرة بسبب انقطاع الاتصال"
       },
       "solution3": {
-        "en": "Denormalized progress fields updated through Django signals with background batch recalculation when content changes",
-        "ar": "حقول تقدم غير طبيعية محدثة من خلال إشارات Django مع إعادة حساب دفعة في الخلفية عند تغيير المحتوى"
+        "en": "Django signals update denormalized progress fields on each lesson completion; Celery batch jobs recalculate affected enrollments whenever course content is modified, keeping progress data always consistent",
+        "ar": "إشارات Django تحدّث حقول التقدم غير المعيارية عند إتمام كل درس؛ مهام Celery الدفعية تعيد احتساب التسجيلات المتأثرة عند تعديل محتوى الدورة، مما يبقي بيانات التقدم دائماً متسقة"
       },
       "solution4": {
-        "en": "Status-based workflow with admin approval gates and custom RBAC permission classes",
-        "ar": "سير عمل قائم على الحالة مع بوابات موافقة المسؤول وفئات أذونات RBAC مخصصة"
+        "en": "Status-based course publishing FSM (draft → pending → approved → published) with custom RBAC permission classes enforcing approval gates at the query level, not just the view layer",
+        "ar": "آلة حالة محدودة لنشر الدورات (مسودة → معلقة → موافق عليها → منشورة) مع فئات أذونات RBAC مخصصة تفرض بوابات الموافقة على مستوى الاستعلام، وليس فقط طبقة العرض"
       },
       "technologies": {
         "en": "Technologies:",
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "Enabled structured online learning for 5,000+ students with proper academic organization. Progress tracking provides clear visibility into learning journey. Resumable uploads ensure reliable video delivery even with unstable connections. Course completion rate increased by 35%. Automated enrollment and payment system reduced administrative overhead.",
-        "ar": "تمكين التعلم الإلكتروني المنظم لأكثر من 5000 طالب مع تنظيم أكاديمي مناسب. يوفر تتبع التقدم رؤية واضحة لرحلة التعلم. تضمن الرفعات القابلة للاستئناف تسليم فيديو موثوق حتى مع اتصالات غير مستقرة. زاد معدل إتمام الدورة بنسبة 35%. قلل نظام التسجيل والدفع الآلي العبء الإداري."
+        "en": "Enabled structured online learning for 5,000+ students across a proper academic hierarchy. Resumable uploads eliminated instructor frustration over dropped connections for large lecture files. Accurate progress tracking gives students and admins clear visibility into completion status at all times. Course completion rate increased by 35%. Automated enrollment and payment processing significantly reduced administrative overhead.",
+        "ar": "مكّن التعلم الإلكتروني المنظم لأكثر من 5000 طالب عبر هيكل أكاديمي حقيقي. الرفع القابل للاستئناف أزال إحباط المدرسين من ضياع ملفات المحاضرات الكبيرة عند انقطاع الاتصال. تتبع التقدم الدقيق يمنح الطلاب والمسؤولين رؤية واضحة لحالة الإتمام في كل وقت. ارتفع معدل إتمام الدورات بنسبة 35%. أتمتة التسجيل والدفع قلّصت العبء الإداري بشكل ملحوظ."
       }
     },
     "umrain": {
       "title": {
-        "en": "Umrain - Multi-Vendor Travel Marketplace",
-        "ar": "Umrain - سوق سفر متعدد البائعين"
+        "en": "Umrain: Commission-Based Multi-Vendor Travel Booking Platform Across 6 Service Types",
+        "ar": "Umrain: منصة حجز سفر متعددة البائعين قائمة على العمولات تغطي 6 أنواع خدمات"
       },
       "problem": {
-        "en": "Need for a unified booking platform supporting 6+ service types (hotels, tours, flights, boats, cars, events) with different booking models, pricing structures, and availability systems. Required commission engine, multi-currency support, and vendor management.",
-        "ar": "الحاجة إلى منصة حجز موحدة تدعم أكثر من 6 أنواع خدمات (فنادق، جولات، رحلات، قوارب، سيارات، فعاليات) مع نماذج حجز وهياكل تسعير وأنظمة توفر مختلفة. يتطلب محرك عمولات ودعم متعدد العملات وإدارة البائعين."
+        "en": "Travel businesses offering multiple service types — hotels, tours, flights, boats, cars, and events — needed a unified platform where vendors could manage listings independently, while customers experienced a single coherent booking flow. The challenge: each service type has fundamentally different pricing structures, availability logic, and booking models that can't share the same schema naively.",
+        "ar": "شركات السفر التي تقدم أنواعاً متعددة من الخدمات — فنادق وجولات ورحلات وقوارب وسيارات وفعاليات — احتاجت إلى منصة موحدة يستطيع فيها البائعون إدارة قوائمهم باستقلالية، بينما يختبر العملاء تدفق حجز واحد متماسك. التحدي: كل نوع خدمة له هياكل تسعير ومنطق توفر ونماذج حجز مختلفة جوهرياً لا يمكن أن تشترك في نفس المخطط ببساطة."
       },
       "solution1": {
-        "en": "Polymorphic booking architecture allowing unified booking flow across diverse service types",
-        "ar": "هندسة معمارية حجز متعددة الأشكال تسمح بتدفق حجز موحد عبر أنواع الخدمات المتنوعة"
+        "en": "Polymorphic booking core — a single bookings table handles all 6 service types via morphable relationships; new service types can be onboarded without modifying the booking engine or schema",
+        "ar": "نواة حجز متعددة الأشكال — جدول حجوزات واحد يتعامل مع جميع أنواع الخدمات الستة عبر علاقات morphable؛ يمكن إضافة أنواع خدمات جديدة دون تعديل محرك الحجز أو مخطط قاعدة البيانات"
       },
       "solution2": {
-        "en": "Modular architecture with service-specific modules (Hotel, Tour, Flight, etc.) following consistent patterns",
-        "ar": "هندسة معمارية معيارية مع وحدات خاصة بالخدمة (فندق، جولة، رحلة، إلخ) تتبع أنماطًا متسقة"
+        "en": "Modular service architecture with a consistent pattern per service module (Hotel, Tour, Flight, etc.), enabling isolated development and testing without cross-module coupling",
+        "ar": "هندسة خدمة معيارية بنمط متسق لكل وحدة خدمة (فندق، جولة، رحلة، إلخ)، تُمكّن التطوير والاختبار المعزولين دون اقتران بين الوحدات"
       },
       "solution3": {
-        "en": "Dynamic pricing engine handling seasonal rates, discounts, and multi-currency conversions",
-        "ar": "محرك تسعير ديناميكي يتعامل مع الأسعار الموسمية والخصومات وتحويلات العملات المتعددة"
+        "en": "Dynamic pricing engine that resolves seasonal rates, tiered discounts, and multi-currency conversions through a single pipeline per booking request",
+        "ar": "محرك تسعير ديناميكي يُحسم الأسعار الموسمية والخصومات المتدرجة وتحويلات العملات المتعددة عبر خط أنابيب واحد لكل طلب حجز"
       },
       "solution4": {
-        "en": "Commission system with revenue sharing, refund handling, and financial reporting",
-        "ar": "نظام عمولات مع تقاسم الإيرادات ومعالجة الاسترداد والتقارير المالية"
+        "en": "Commission engine with per-vendor rules, automated revenue sharing, refund processing, and cycle-based financial reporting for platform operators",
+        "ar": "محرك عمولات بقواعد مخصصة لكل بائع، وتقاسم إيرادات آلي، ومعالجة للمبالغ المستردة، وتقارير مالية دورية لمشغلي المنصة"
       },
       "technologies": {
         "en": "Technologies:",
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "One-stop booking platform supporting 6 service types with unified user experience. Modular architecture enables rapid addition of new service types. Commission-based revenue model scales without upfront vendor costs. Handles complex pricing scenarios including seasonal rates and multi-currency transactions.",
-        "ar": "منصة حجز شاملة تدعم 6 أنواع خدمات مع تجربة مستخدم موحدة. تتيح الهندسة المعمارية المعيارية إضافة سريعة لأنواع خدمات جديدة. نموذج إيرادات قائم على العمولات يتوسع دون تكاليف مسبقة للبائعين. يتعامل مع سيناريوهات تسعير معقدة بما في ذلك الأسعار الموسمية والمعاملات متعددة العملات."
+        "en": "One platform serving 6 distinct travel service types under a unified customer experience. The modular design allows new service types to be onboarded without architectural changes. The commission model scales vendor count without upfront cost exposure. Multi-gateway payment support (Stripe, PayPal, Paystack) reduces checkout abandonment across international markets.",
+        "ar": "منصة واحدة تخدم 6 أنواع خدمات سفر مختلفة تحت تجربة عملاء موحدة. يتيح التصميم المعياري إضافة أنواع خدمات جديدة دون تغييرات معمارية. نموذج العمولة يُوسّع عدد البائعين دون التعرض لتكاليف مسبقة. دعم بوابات الدفع المتعددة (Stripe، PayPal، Paystack) يقلل التخلي عن عملية الدفع في الأسواق الدولية."
       }
     },
     "pear": {
       "title": {
-        "en": "Pear - Telemedicine Platform",
-        "ar": "Pear - منصة الطب عن بُعد"
+        "en": "Pear: Telemedicine Platform with Video Consultations, Verified Providers & Smart Scheduling",
+        "ar": "Pear: منصة طب عن بُعد بمشاورات فيديو ومزودين موثّقين وجدولة ذكية"
       },
       "problem": {
-        "en": "Telemedicine platform requiring real-time video conferencing, flexible scheduling with recurring availability patterns, secure token generation for video sessions, payment capture timing (hold-and-capture), and document verification workflow for provider onboarding.",
-        "ar": "منصة طب عن بُعد تتطلب مؤتمرات فيديو في الوقت الفعلي، جدولة مرنة مع أنماط توفر متكررة، توليد رموز آمنة لجلسات الفيديو، توقيت التقاط الدفع (الاحتفاظ والالتقاط)، وسير عمل التحقق من المستندات لتسجيل مقدمي الخدمات."
+        "en": "Healthcare providers moving consultations online faced three hard problems simultaneously: securing video sessions without exposing static room credentials, preventing double-bookings across complex recurring availability schedules, and ensuring only credentialed providers could access clinical features. Standard booking and video tools don't address these together.",
+        "ar": "مقدمو الرعاية الصحية الذين ينقلون استشاراتهم إلى الإنترنت واجهوا ثلاثة مشكلات صعبة في آنٍ واحد: تأمين جلسات الفيديو دون الكشف عن بيانات اعتماد ثابتة للغرف، منع الحجوزات المتعارضة عبر جداول توفر متكررة ومعقدة، وضمان أن الميزات السريرية لا يصل إليها إلا المزودون الموثّقون. الأدوات المعتادة للحجز والفيديو لا تعالج هذه التحديات مجتمعة."
       },
       "solution1": {
-        "en": "Agora SDK integration with dynamic token generation for secure video room access and webhook-based session tracking",
-        "ar": "تكامل Agora SDK مع توليد رموز ديناميكي للوصول الآمن إلى غرف الفيديو وتتبع الجلسات القائم على Webhooks"
+        "en": "Agora SDK with dynamic per-session token generation — room credentials are never static; webhook handlers track session lifecycle (join, duration, leave) for billing accuracy and session records",
+        "ar": "Agora SDK مع توليد رمز ديناميكي لكل جلسة — بيانات اعتماد الغرفة ليست أبداً ثابتة؛ معالجات الـ Webhook تتتبع دورة حياة الجلسة (الدخول، المدة، الخروج) لدقة الفوترة وسجلات الجلسات"
       },
       "solution2": {
-        "en": "Slot-based scheduling separating availability templates (recurring patterns) from concrete time slots with atomic reservation",
-        "ar": "جدولة قائمة على الفترات تفصل قوالب التوفر (الأنماط المتكررة) عن الفترات الزمنية الملموسة مع حجز ذري"
+        "en": "Two-layer scheduling: providers set recurring availability templates once; concrete time slots are generated on query and reserved atomically within a single transaction, eliminating race-condition double-bookings",
+        "ar": "جدولة ذات طبقتين: يضع المزودون قوالب التوفر المتكررة مرة واحدة؛ الفترات الزمنية الفعلية تُولَّد عند الاستعلام وتُحجز بشكل ذري ضمن معاملة واحدة، مما يُلغي الحجوزات المتعارضة الناتجة عن التزامن"
       },
       "solution3": {
-        "en": "Polymorphic session model linking sessions to bookings or standalone events",
-        "ar": "نموذج جلسة متعدد الأشكال يربط الجلسات بالحجوزات أو الأحداث المستقلة"
+        "en": "Hold-and-capture Stripe payment flow — funds held at booking, captured only when the session begins; automatic release on cancellation eliminates manual refund processing",
+        "ar": "تدفق دفع Stripe بالاحتجاز والالتقاط — الأموال محتجزة عند الحجز، وتُلتقط فقط عند بدء الجلسة؛ الإفراج التلقائي عند الإلغاء يُلغي معالجة المبالغ المستردة يدوياً"
       },
       "solution4": {
-        "en": "Document verification workflow with ability-based tokens providing conditional feature access based on approval status",
-        "ar": "سير عمل التحقق من المستندات مع رموز قائمة على القدرات توفر وصولًا مشروطًا للميزات بناءً على حالة الموافقة"
+        "en": "Ability-based Sanctum tokens gate clinical features by document verification status — unverified providers get a restricted feature set without any code branching in controllers",
+        "ar": "رموز Sanctum القائمة على القدرات تحجب الميزات السريرية بناءً على حالة التحقق من المستندات — المزودون غير الموثّقين يحصلون على مجموعة ميزات مقيدة دون أي تفرع في الكود بمستوى المتحكمات"
       },
       "technologies": {
         "en": "Technologies:",
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "Healthcare providers expanded reach beyond physical locations. Automated scheduling reduced administrative overhead. Integrated video conferencing eliminated need for external tools. Document verification ensures platform quality. Flexible scheduling accommodates various consultation types from one-time appointments to recurring therapy sessions.",
-        "ar": "وسع مقدمو الرعاية الصحية نطاقهم خارج المواقع المادية. قللت الجدولة الآلية العبء الإداري. ألغى تكامل مؤتمرات الفيديو الحاجة إلى أدوات خارجية. يضمن التحقق من المستندات جودة المنصة. تستوعب الجدولة المرنة أنواع استشارات مختلفة من المواعيد لمرة واحدة إلى جلسات علاج متكررة."
+        "en": "Providers can reach patients beyond their physical catchment area with no dependency on external tools. Atomic slot reservation handles concurrent booking attempts reliably under load. The verified-provider gate maintains platform quality without manual admin intervention. The hold-and-capture model eliminates payment disputes for no-shows and late cancellations.",
+        "ar": "يستطيع المزودون الوصول إلى المرضى خارج نطاقهم الجغرافي دون الاعتماد على أدوات خارجية. حجز الفترات الذري يتعامل بشكل موثوق مع محاولات الحجز المتزامنة تحت الضغط. بوابة التحقق من المزودين تحافظ على جودة المنصة دون تدخل يدوي من الإدارة. نموذج الاحتجاز والالتقاط يُلغي نزاعات الدفع عند الغياب أو الإلغاء المتأخر."
       }
     },
     "offerme": {
       "title": {
-        "en": "OfferMe - B2B Service Marketplace",
-        "ar": "OfferMe - سوق خدمات B2B"
+        "en": "OfferMe: Real-Time B2B Service Marketplace with Dual-Role Accounts & Dynamic Request Fields",
+        "ar": "OfferMe: سوق خدمات B2B في الوقت الفعلي بحسابات ذات دور مزدوج وحقول طلبات ديناميكية"
       },
       "problem": {
-        "en": "B2B marketplace requiring multi-role users (clients and providers on same account), real-time chat with presence tracking, category-specific dynamic fields without schema changes, and multilingual push notifications in user-preferred languages.",
-        "ar": "سوق B2B يتطلب مستخدمين متعددين الأدوار (العملاء ومقدمو الخدمات على نفس الحساب)، دردشة في الوقت الفعلي مع تتبع الحضور، حقول ديناميكية خاصة بالفئة دون تغييرات في المخطط، وإشعارات دفع متعددة اللغات بلغات المستخدم المفضلة."
+        "en": "A B2B marketplace needed to solve three non-trivial problems simultaneously: users who act as both buyers and sellers needed a single account without role conflicts; service request forms needed category-specific fields without database migrations for each new category; and push notifications needed to reach users in their preferred language regardless of when they registered.",
+        "ar": "سوق B2B كان بحاجة إلى حل ثلاثة مشاكل غير تافهة في آنٍ واحد: المستخدمون الذين يعملون مشترين وبائعين في آنٍ واحد يحتاجون حساباً واحداً بلا تعارضات في الأدوار؛ نماذج طلبات الخدمة تحتاج حقولاً خاصة بكل فئة دون migrations لكل فئة جديدة؛ والإشعارات الفورية يجب أن تصل بلغة المستخدم المفضلة بغض النظر عن وقت تسجيله."
       },
       "solution1": {
-        "en": "Ability-based authentication tokens allowing single account with dual roles (client/provider)",
-        "ar": "رموز مصادقة قائمة على القدرات تسمح بحساب واحد بأدوار مزدوجة (عميل/مزود)"
+        "en": "Ability-based Sanctum tokens issued per role — one account, two scoped tokens; API access and permissions resolve per-request from token claims, not from a role column",
+        "ar": "رموز Sanctum القائمة على القدرات تُصدر لكل دور — حساب واحد، رمزان محدودا النطاق؛ وصول API والأذونات تُحسم لكل طلب من مطالبات الرمز، وليس من عمود الدور"
       },
       "solution2": {
-        "en": "Thread-based messaging with Laravel Broadcasting presence channels for real-time chat and read receipts",
-        "ar": "رسائل قائمة على الخيوط مع قنوات حضور Laravel Broadcasting للدردشة في الوقت الفعلي وإيصالات القراءة"
+        "en": "Thread-based messaging with Laravel Broadcasting presence channels — real-time chat, online indicators, and read receipts with no client-side polling",
+        "ar": "رسائل قائمة على الخيوط مع قنوات حضور Laravel Broadcasting — دردشة فورية ومؤشرات الحضور وإيصالات القراءة دون polling من جانب العميل"
       },
       "solution3": {
-        "en": "Polymorphic dynamic field system enabling category-specific request attributes without database schema changes",
-        "ar": "نظام حقول ديناميكي متعدد الأشكال يتيح سمات طلب خاصة بالفئة دون تغييرات في مخطط قاعدة البيانات"
+        "en": "Polymorphic dynamic field system — category-specific request attributes stored without schema changes; adding a new service category requires only a configuration entry, not a migration",
+        "ar": "نظام حقول ديناميكي متعدد الأشكال — سمات الطلب الخاصة بكل فئة تُخزَّن دون تغييرات في المخطط؛ إضافة فئة خدمة جديدة لا تتطلب سوى إدخال في ملف الإعداد، لا migration"
       },
       "solution4": {
-        "en": "Multilingual FCM integration storing language preferences and sending parallel notification batches",
-        "ar": "تكامل FCM متعدد اللغات يخزن تفضيلات اللغة ويرسل دفعات إشعارات متوازية"
+        "en": "Multilingual FCM integration — language preferences stored per user; notification batches dispatched in parallel per locale so every user receives content in their preferred language",
+        "ar": "تكامل FCM متعدد اللغات — تفضيلات اللغة مُخزَّنة لكل مستخدم؛ دفعات الإشعارات تُرسَل بالتوازي لكل لغة حتى يتلقى كل مستخدم المحتوى بلغته المفضلة"
       },
       "technologies": {
         "en": "Technologies:",
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "Streamlined matching between service seekers and providers with real-time communication. Dynamic field system adapts to new service categories without code changes. Multilingual notifications improve engagement. Reduced time-to-contract by 50% through efficient offer comparison workflows.",
-        "ar": "مطابقة مبسطة بين باحثي الخدمات ومقدميها مع اتصال في الوقت الفعلي. يتكيف نظام الحقول الديناميكي مع فئات خدمات جديدة دون تغييرات في الكود. تحسن الإشعارات متعددة اللغات المشاركة. تقليل وقت التعاقد بنسبة 50% من خلال سير عمل مقارنة العروض الفعالة."
+        "en": "Buyers and sellers operate from a single account without friction or confusion. The dynamic field system has the capacity to absorb new service categories without a single migration. Multilingual notifications improve engagement across different markets. Efficient offer comparison workflows reduced average time-to-contract by 50%.",
+        "ar": "المشترون والبائعون يعملون من حساب واحد دون احتكاك أو ارتباك. نظام الحقول الديناميكي قادر على استيعاب فئات خدمات جديدة دون migration واحد. الإشعارات متعددة اللغات تُحسّن المشاركة عبر أسواق مختلفة. سير عمل مقارنة العروض الفعّال قلّص متوسط وقت التعاقد بنسبة 50%."
       }
     },
     "cards": {
