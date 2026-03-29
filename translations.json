@@ -4,6 +4,10 @@
       "en": "Home",
       "ar": "الرئيسية"
     },
+    "mindset": {
+      "en": "Engineering",
+      "ar": "الهندسة"
+    },
     "services": {
       "en": "Services",
       "ar": "الخدمات"
@@ -17,12 +21,16 @@
       "ar": "المنهجية"
     },
     "recruiters": {
-      "en": "Technical Profile",
+      "en": "Profile",
       "ar": "الملف التقني"
     },
     "projects": {
       "en": "Work",
       "ar": "المشاريع"
+    },
+    "casestudy": {
+      "en": "Case Study",
+      "ar": "دراسة حالة"
     },
     "contact": {
       "en": "Contact",
@@ -31,28 +39,28 @@
   },
   "hero": {
     "mainHeadline": {
-      "en": "Backend Architect Building Enterprise Systems That Scale",
-      "ar": "مهندس أنظمة خلفية يبني أنظمة مؤسسية قابلة للتوسع"
+      "en": "I Design Backend Systems That Don't Break at Scale",
+      "ar": "أصمم أنظمة خلفية لا تنهار تحت الضغط"
     },
     "subHeadline": {
-      "en": "5+ Production Systems | Laravel • Django • Spring Boot | Real-Time APIs • Payment Processing • Multi-Vendor Architectures",
-      "ar": "أكثر من 5 أنظمة إنتاجية | Laravel • Django • Spring Boot | واجهات برمجة تطبيقات في الوقت الفعلي • معالجة المدفوعات • هندسة معمارية متعددة البائعين"
+      "en": "5 production systems — Laravel, Django, Spring Boot — across healthcare, e-learning, travel & marketplace domains",
+      "ar": "5 أنظمة إنتاجية — Laravel، Django، Spring Boot — في مجالات الرعاية الصحية والتعليم الإلكتروني والسفر والأسواق"
     },
     "tagline": {
-      "en": "Transforming complex business requirements into scalable, maintainable backend systems that power growth",
-      "ar": "تحويل متطلبات الأعمال المعقدة إلى أنظمة خلفية قابلة للتوسع والصيانة تدعم النمو"
+      "en": "Polymorphic architectures · Real-time APIs · Multi-gateway payments · Performance-optimized queries",
+      "ar": "هندسة معمارية متعددة الأشكال · واجهات API فورية · بوابات دفع متعددة · استعلامات محسّنة الأداء"
     },
     "value1": {
-      "en": "Enterprise-grade systems handling real-time communication & payments",
-      "ar": "أنظمة على مستوى المؤسسات تتعامل مع الاتصالات في الوقت الفعلي والمدفوعات"
+      "en": "Designed a polymorphic booking engine handling 6 service types through a single unified interface",
+      "ar": "صممت محرك حجز متعدد الأشكال يعالج 6 أنواع خدمات عبر واجهة موحدة واحدة"
     },
     "value2": {
-      "en": "Full-cycle development from architecture to deployment",
-      "ar": "تطوير بدورة كاملة من الهندسة المعمارية إلى النشر"
+      "en": "Eliminated N+1 query problems through strategic denormalization and signal-based cache updates",
+      "ar": "حللت مشاكل استعلامات N+1 من خلال إلغاء التطبيع الاستراتيجي وتحديثات الكاش المبنية على الإشارات"
     },
     "value3": {
-      "en": "Proven track record across healthcare, e-learning, travel & marketplace domains",
-      "ar": "سجل حافل عبر مجالات الرعاية الصحية والتعليم الإلكتروني والسفر والأسواق"
+      "en": "Built medical systems with immutable records, dual authentication, and audit-trail integrity",
+      "ar": "بنيت أنظمة طبية بسجلات غير قابلة للتعديل ومصادقة مزدوجة وسلامة مسار التدقيق"
     },
     "cta": {
       "startProject": {
@@ -773,6 +781,10 @@
         "outcome": {
           "en": "Outcome:",
           "ar": "النتيجة:"
+        },
+        "metrics": {
+          "en": "Engineering Impact:",
+          "ar": "الأثر الهندسي:"
         }
       },
       "healthcare": {
@@ -1059,8 +1071,292 @@
   },
   "footer": {
     "tagline": {
-      "en": "Software Engineering Partner & System Architect",
-      "ar": "شريك هندسة البرمجيات ومهندس الأنظمة"
+      "en": "Backend Architect & System Engineer",
+      "ar": "مهندس معماري للأنظمة الخلفية"
+    }
+  },
+  "mindset": {
+    "title": {
+      "en": "How I Think as a Backend Engineer",
+      "ar": "كيف أفكر كمهندس أنظمة خلفية"
+    },
+    "subtitle": {
+      "en": "System design is not about tools — it's about decisions. Here's how I approach real problems.",
+      "ar": "تصميم الأنظمة لا يتعلق بالأدوات — بل بالقرارات. هكذا أتعامل مع المشاكل الحقيقية."
+    },
+    "api": {
+      "title": {
+        "en": "API Design",
+        "ar": "تصميم واجهات API"
+      },
+      "principle": {
+        "en": "Design contracts first, implement second.",
+        "ar": "صمم العقود أولاً، ثم نفّذ."
+      },
+      "item1": {
+        "en": "Resource-oriented REST with consistent naming and versioning",
+        "ar": "واجهات REST موجهة للموارد بتسمية وإصدارات متسقة"
+      },
+      "item2": {
+        "en": "Polymorphic interfaces to unify varying business entities through single endpoints",
+        "ar": "واجهات متعددة الأشكال لتوحيد كيانات الأعمال المتباينة عبر نقاط نهاية واحدة"
+      },
+      "item3": {
+        "en": "Request validation at the gate — never trust client input",
+        "ar": "التحقق من الطلبات عند البوابة — لا تثق أبداً بمدخلات العميل"
+      },
+      "exampleLabel": {
+        "en": "Real Example — Umrain Booking API:",
+        "ar": "مثال حقيقي — واجهة حجز Umrain:"
+      },
+      "insight": {
+        "en": "One endpoint handles hotels, tours, flights, boats, cars, and events — the polymorphic Bookable interface resolves the correct pricing, availability, and booking logic per type. Each service type shares the same booking flow without duplicating core logic.",
+        "ar": "نقطة نهاية واحدة تعالج الفنادق والجولات والرحلات والقوارب والسيارات والفعاليات — واجهة Bookable متعددة الأشكال تحسم التسعير والتوفر ومنطق الحجز الصحيح لكل نوع. كل نوع خدمة يشارك نفس تدفق الحجز دون تكرار المنطق الأساسي."
+      }
+    },
+    "perf": {
+      "title": {
+        "en": "Performance Optimization",
+        "ar": "تحسين الأداء"
+      },
+      "principle": {
+        "en": "Measure first, optimize second. Never guess.",
+        "ar": "قِس أولاً، حسّن ثانياً. لا تخمّن أبداً."
+      },
+      "item1": {
+        "en": "Query analysis with EXPLAIN ANALYZE before any optimization",
+        "ar": "تحليل الاستعلامات بـ EXPLAIN ANALYZE قبل أي تحسين"
+      },
+      "item2": {
+        "en": "N+1 detection through eager loading audit",
+        "ar": "كشف N+1 من خلال تدقيق التحميل المسبق"
+      },
+      "item3": {
+        "en": "Strategic denormalization where read-heavy patterns justify it",
+        "ar": "إلغاء التطبيع الاستراتيجي حيث تبرره أنماط القراءة المكثفة"
+      },
+      "item4": {
+        "en": "Background processing (Celery/Queue) for non-blocking operations",
+        "ar": "المعالجة في الخلفية (Celery/Queue) للعمليات غير المعيقة"
+      },
+      "exampleLabel": {
+        "en": "Real Example — E-Learning Progress Page:",
+        "ar": "مثال حقيقي — صفحة تقدم التعلم الإلكتروني:"
+      },
+      "before": {
+        "en": "Before",
+        "ar": "قبل"
+      },
+      "after": {
+        "en": "After",
+        "ar": "بعد"
+      },
+      "pageLoad": {
+        "en": "Query complexity per student",
+        "ar": "تعقيد الاستعلام لكل طالب"
+      },
+      "queries": {
+        "en": "Queries per page load",
+        "ar": "الاستعلامات لكل تحميل صفحة"
+      },
+      "reduction": {
+        "en": "Cache updates on write, not read",
+        "ar": "تحديثات الكاش عند الكتابة لا القراءة"
+      }
+    },
+    "arch": {
+      "title": {
+        "en": "System Architecture",
+        "ar": "هندسة الأنظمة"
+      },
+      "principle": {
+        "en": "Separate what changes from what stays stable.",
+        "ar": "افصل ما يتغير عمّا يبقى ثابتاً."
+      },
+      "item1": {
+        "en": "Service layer between controllers and models — controllers stay thin",
+        "ar": "طبقة خدمة بين المتحكمات والنماذج — المتحكمات تبقى رشيقة"
+      },
+      "item2": {
+        "en": "Strategy pattern for interchangeable implementations (payments, notifications)",
+        "ar": "نمط Strategy للتنفيذات القابلة للتبديل (المدفوعات، الإشعارات)"
+      },
+      "item3": {
+        "en": "Event-driven architecture for cross-cutting concerns",
+        "ar": "هندسة معمارية قائمة على الأحداث للاهتمامات المتقاطعة"
+      },
+      "item4": {
+        "en": "Database migrations as first-class citizens (Flyway, Laravel migrations)",
+        "ar": "ترحيلات قواعد البيانات ككيانات من الدرجة الأولى (Flyway، ترحيلات Laravel)"
+      },
+      "exampleLabel": {
+        "en": "Real Example — OfferMe Dynamic Fields:",
+        "ar": "مثال حقيقي — الحقول الديناميكية في OfferMe:"
+      },
+      "insight": {
+        "en": "New service categories added without code changes or database migrations. The system shifted category management from a developer task to an admin configuration task.",
+        "ar": "فئات الخدمة الجديدة تُضاف دون تغييرات في الكود أو ترحيلات قواعد البيانات. النظام حوّل إدارة الفئات من مهمة مطوّر إلى مهمة إعدادات المسؤول."
+      }
+    },
+    "sec": {
+      "title": {
+        "en": "Security by Design",
+        "ar": "الأمان بالتصميم"
+      },
+      "principle": {
+        "en": "Security isn't a layer you add — it's how you build.",
+        "ar": "الأمان ليس طبقة تُضيفها — إنه طريقة البناء."
+      },
+      "item1": {
+        "en": "Separate auth endpoints per user type to prevent role manipulation",
+        "ar": "نقاط مصادقة منفصلة لكل نوع مستخدم لمنع التلاعب بالأدوار"
+      },
+      "item2": {
+        "en": "Ability-based tokens (not just role-based) for granular access control",
+        "ar": "رموز قائمة على القد��ات (ليس فقط الأدوار) للتحكم الدقيق بالوصول"
+      },
+      "item3": {
+        "en": "Immutable records where business rules demand audit trails",
+        "ar": "سجلات غير قابلة للتعديل حيث تتطلب قواعد العم�� مسارات تدقيق"
+      },
+      "item4": {
+        "en": "WebSocket channel interceptors with JWT validation",
+        "ar": "معترضات قناة WebSocket مع التحقق من JWT"
+      },
+      "exampleLabel": {
+        "en": "Real Example — Jaramana Clinic Auth:",
+        "ar": "مثال حقيقي — مصادقة عيادة Jaramana:"
+      },
+      "insight": {
+        "en": "Dual authentication prevents user-type manipulation. Finalized medical records are immutable — protecting patient data integrity at the business logic layer, not just the database.",
+        "ar": "المصادقة المزدوجة تمنع التلاعب بنوع المستخدم. السجلات الطبية المُنهاة غير قابلة للتعديل — حماية سلامة بيانات المرضى على مستوى منطق الأعمال وليس فقط قاعدة البيانات."
+      }
+    }
+  },
+  "casestudy": {
+    "title": {
+      "en": "Deep Dive: System Architecture",
+      "ar": "نظرة عميقة: هندسة الأنظمة"
+    },
+    "subtitle": {
+      "en": "A closer look at how I approach complex backend problems",
+      "ar": "نظرة أقرب على كيفية تعاملي مع مشاكل الأنظمة الخلفية المعقدة"
+    },
+    "labels": {
+      "problem": {
+        "en": "The Problem",
+        "ar": "المشكلة"
+      },
+      "architecture": {
+        "en": "Architecture Overview",
+        "ar": "نظرة عامة على الهندسة المعمارية"
+      },
+      "decisions": {
+        "en": "Key Technical Decisions",
+        "ar": "القرارات التقنية الرئيسية"
+      },
+      "code": {
+        "en": "Core Architecture Pattern",
+        "ar": "نمط الهندسة المعمارية الأساسي"
+      },
+      "challenges": {
+        "en": "Challenges Solved",
+        "ar": "التحديات المحلولة"
+      },
+      "results": {
+        "en": "Results",
+        "ar": "النتائج"
+      }
+    },
+    "umrain": {
+      "title": {
+        "en": "Umrain — Multi-Vendor Travel Marketplace",
+        "ar": "Umrain — سوق سفر متعدد البائعين"
+      },
+      "tagline": {
+        "en": "One booking engine. Six service types. Three payment gateways. One shared interface.",
+        "ar": "محرك حجز واحد. ستة أنواع خدمات. ثلاث بوابات دفع. واجهة مشتركة واحدة."
+      },
+      "problem": {
+        "en": "A travel marketplace needed to support hotels, tours, flights, boats, car rentals, and events — each with completely different booking models, pricing structures, and availability logic. The traditional approach would mean 6 separate booking systems with duplicated payment logic, separate admin panels, and inconsistent APIs. Every new service type would take weeks to build from scratch.",
+        "ar": "سوق سفر كان بحاجة لدعم الفنادق والجولات والرحلات والقوارب وتأجير السيارات والفعاليات — كل منها بنماذج حجز وهياكل تسعير ومنطق توفر مختلف تماماً. النهج التقليدي يعني 6 أنظمة حجز منفصلة بمنطق دفع مكرر ولوحات إدارة منفصلة وواجهات API غير متسقة. كل نوع خدمة جديد سيستغرق أسابيع للبناء من الصفر."
+      },
+      "decision1": {
+        "title": {
+          "en": "Why Polymorphic Relationships over Single Table Inheritance?",
+          "ar": "لماذا العلاقات متعددة الأشكال بدلاً من وراثة الجدول الواحد؟"
+        },
+        "desc": {
+          "en": "STI would bloat the bookings table with nullable columns for each service type. Polymorphic relationships keep each service's data normalized while allowing unified queries through the Bookable interface. Adding a new service = one new model implementing Bookable, not a table migration.",
+          "ar": "وراثة الجدول الواحد ستضخم جدول الحجوزات بأعمدة nullable لكل نوع خدمة. العلاقات متعددة الأشكال تبقي بيانات كل خدمة مطبّعة مع السماح باستعلامات موحدة عبر واجهة Bookable. إضافة خدمة جديدة = نموذج واحد جديد يطبق Bookable وليس ترحيل جدول."
+        }
+      },
+      "decision2": {
+        "title": {
+          "en": "Why Strategy Pattern for Payments?",
+          "ar": "لماذا نمط Strategy للمدفوعات؟"
+        },
+        "desc": {
+          "en": "Vendors operate in different regions: Stripe for US/EU, PayPal for global, Paystack for Africa. Each gateway is wrapped behind a PaymentProcessor interface. Adding a new payment gateway means implementing one new class — existing booking logic remains untouched.",
+          "ar": "البائعون يعملون في مناطق مختلفة: Stripe لأمريكا/أوروبا، PayPal عالمياً، Paystack لأفريقيا. كل بوابة مغلفة خلف واجهة PaymentProcessor. إضافة بوابة دفع جديدة تعني تنفيذ فئة واحدة جديدة — منطق الحجز الحالي يبقى دون مساس."
+        }
+      },
+      "decision3": {
+        "title": {
+          "en": "Why a Separate Pricing Engine?",
+          "ar": "لماذا محرك تسعير منفصل؟"
+        },
+        "desc": {
+          "en": "Hotels use per-night with seasonal rates. Tours use per-person with group discounts. Flights use dynamic fare classes. Extracting pricing into a dedicated engine with per-type calculators keeps booking logic clean and testable. Each calculator handles only its own pricing rules.",
+          "ar": "الفنادق تستخدم التسعير بالليلة مع أسعار موسمية. الجولات تستخدم التسعير بالشخص مع خصومات جماعية. الرحلات تستخدم فئات أسعار ديناميكية. استخراج التسعير في محرك مخصص بحاسبات لكل نوع يبقي منطق الحجز نظيفاً وقابلاً للاختبار."
+        }
+      },
+      "challenge1": {
+        "title": {
+          "en": "Multi-currency pricing with seasonal rates:",
+          "ar": "التسعير متعدد العملات مع الأسعار الموسمية:"
+        },
+        "desc": {
+          "en": "Built a pricing pipeline that chains seasonal rate lookup → discount application → currency conversion, each step isolated and testable independently.",
+          "ar": "بنيت خط أنابيب تسعير يسلسل البحث عن الأسعار الموسمية ← تطبيق الخصومات ← تحويل العملات، كل خطوة معزولة وقابلة للاختبار بشكل مستقل."
+        }
+      },
+      "challenge2": {
+        "title": {
+          "en": "Commission calculation across payment gateways:",
+          "ar": "حساب العمولات عبر بوابات الدفع:"
+        },
+        "desc": {
+          "en": "Each gateway returns different fee structures. The commission engine normalizes fees before calculating vendor payouts, ensuring accurate revenue splitting regardless of payment method.",
+          "ar": "كل بوابة تعيد هياكل رسوم مختلفة. محرك العمولات يطبّع الرسوم قبل حساب مدفوعات البائعين، مما يضمن تقسيم الإيرادات بدقة بغض النظر عن طريقة الدفع."
+        }
+      },
+      "challenge3": {
+        "title": {
+          "en": "Real-time availability across time zones:",
+          "ar": "التوفر في الوقت الفعلي عبر المناطق الزمنية:"
+        },
+        "desc": {
+          "en": "Hotel availability is date-based, tour availability is slot-based, flight availability is seat-based. Unified the availability check behind the Bookable interface while preserving type-specific logic.",
+          "ar": "توفر الفنادق قائم على التاريخ، توفر الجولات قائم على الفترات، توفر الرحلات قائم على المقاعد. وحّدت فحص التوفر خلف واجهة Bookable مع الحفاظ على المنطق الخاص بكل نوع."
+        }
+      },
+      "result1": {
+        "en": "running on one unified polymorphic booking engine",
+        "ar": "تعمل على محرك حجز موحد متعدد الأشكال"
+      },
+      "result2": {
+        "en": "is all it takes to add a new service type to the platform",
+        "ar": "هو كل ما يتطلبه إضافة نوع خدمة جديد للمنصة"
+      },
+      "result3": {
+        "en": "integrated without modifying existing booking logic",
+        "ar": "تم دمجها دون تعديل منطق الحجز الحالي"
+      },
+      "result4": {
+        "en": "pricing, payment, and commission — each testable independently",
+        "ar": "التسعير والدفع والعمولة — كل منها قابل للاختبار بشكل مستقل"
+      }
     }
   },
   "modal": {
