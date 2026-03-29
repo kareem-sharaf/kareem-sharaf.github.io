@@ -83,7 +83,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe cards and sections
-document.querySelectorAll('.value-card, .tech-category, .method-step, .testimonial-card, .project-card').forEach(card => {
+document.querySelectorAll('.value-card, .tech-category, .method-step, .testimonial-card, .project-card, .mindset-card, .cs-block, .decision-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -453,3 +453,11 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
         // WhatsApp link clicked
     });
 });
+
+// ============================================
+// Dynamic Footer Year
+// ============================================
+const yearEl = document.getElementById('currentYear');
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
