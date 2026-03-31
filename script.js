@@ -181,11 +181,17 @@ const codeElementsNoTranslate = [
     'git commit', 'npm install', 'composer require'
 ];
 
-// Load translations from JSON file
+// Load translations from JSON file (lazy - only fetched when needed)
+let translationsLoaded = false;
 async function loadTranslations() {
+    if (translationsLoaded) {
+        applyTranslations();
+        return;
+    }
     try {
         const response = await fetch('translations.json');
         translations = await response.json();
+        translationsLoaded = true;
         applyTranslations();
     } catch (error) {
         // Error loading translations
@@ -310,13 +316,17 @@ function initLanguageSwitcher() {
             const lang = btn.dataset.lang;
             currentLang = lang;
             localStorage.setItem('language', lang);
-            
+
             // Update active state
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
-            // Apply translations
-            applyTranslations();
+
+            // Load translations if needed, then apply
+            if (!translationsLoaded && lang !== 'en') {
+                loadTranslations();
+            } else {
+                applyTranslations();
+            }
         });
     });
     
@@ -328,9 +338,11 @@ function initLanguageSwitcher() {
     });
 }
 
-// Initialize language switcher and load translations
+// Initialize language switcher and load translations only if non-default language
 initLanguageSwitcher();
-loadTranslations();
+if (currentLang !== 'en') {
+    loadTranslations();
+}
 
 
 // ============================================

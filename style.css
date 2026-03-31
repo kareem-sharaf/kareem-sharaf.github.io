@@ -12,13 +12,13 @@
   --color-accent: #00b5d8;
   /* Teal - Innovation, precision */
 
-  /* Backgrounds - Darker, more masculine */
-  --color-bg-primary: #d1d5db;
-  /* Slate gray - darker background */
+  /* Backgrounds - Clean, modern */
+  --color-bg-primary: #f8fafc;
+  /* Off-white - clean, modern background */
   --color-bg-section: #ffffff;
   /* Pure white cards for contrast */
-  --color-bg-hover: #9ca3af;
-  /* Darker hover state */
+  --color-bg-hover: #f1f5f9;
+  /* Subtle hover state */
 
   /* Text */
   --color-text-headers: #1a202c;
@@ -94,6 +94,27 @@
   --transition-fast: 150ms ease;
   --transition-base: 300ms ease;
   --transition-slow: 500ms ease;
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  z-index: 10000;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+
+.skip-to-content:focus {
+  top: 1rem;
 }
 
 /* Dark Mode */

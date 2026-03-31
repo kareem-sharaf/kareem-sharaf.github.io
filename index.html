@@ -9,6 +9,40 @@
     <meta name="keywords"
         content="Backend Architect, System Engineer, Laravel, Django, Spring Boot, API Development, Database Design, System Architecture, PHP, Python, Java" />
     <title>Kareem Sharaf | Backend Architect — Laravel, Django, Spring Boot</title>
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kareem Sharaf | Backend Architect" />
+    <meta property="og:description" content="Backend Architect & System Engineer. 5 production systems across healthcare, e-learning, travel & marketplace. Laravel, Django, Spring Boot." />
+    <meta property="og:url" content="https://kareemsharaf.com/" />
+    <meta property="og:image" content="https://kareemsharaf.com/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kareem Sharaf | Backend Architect" />
+    <meta name="twitter:description" content="Backend Architect & System Engineer. 5 production systems across healthcare, e-learning, travel & marketplace." />
+    <meta name="twitter:image" content="https://kareemsharaf.com/og-image.png" />
+
+    <!-- Canonical & Theme -->
+    <link rel="canonical" href="https://kareemsharaf.com/" />
+    <meta name="theme-color" content="#1a365d" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kareem Sharaf",
+        "jobTitle": "Backend Architect & System Engineer",
+        "url": "https://kareemsharaf.com/",
+        "sameAs": [
+            "https://www.linkedin.com/in/kareem-sharaf-ite",
+            "https://github.com/kareem-sharaf"
+        ],
+        "knowsAbout": ["Laravel", "Django", "Spring Boot", "API Development", "Database Design", "System Architecture", "PHP", "Python", "Java"]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,6 +52,7 @@
 </head>
 
 <body>
+    <a href="#home" class="skip-to-content">Skip to main content</a>
     <!-- Technical Background Animation System -->
     <div id="tech-background" class="technical-background" aria-hidden="true">
         <!-- Canvas for particle system -->
@@ -1440,7 +1475,7 @@ class BookingService
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact.formSubmit">Send
                             Message</button>
-                        <div class="form-message" id="formMessage"></div>
+                        <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
                     </form>
 
                     <!-- Direct Contact Options -->
@@ -1522,8 +1557,8 @@ class BookingService
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="technical-background.js"></script>
+    <script src="script.js" defer></script>
+    <script src="technical-background.js" defer></script>
 </body>
 
 </html>
