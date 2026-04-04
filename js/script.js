@@ -199,7 +199,7 @@ async function loadTranslations() {
         return;
     }
     try {
-        const response = await fetch('translations.json');
+        const response = await fetch('data/translations.json');
         translations = await response.json();
         translationsLoaded = true;
         applyTranslations();
