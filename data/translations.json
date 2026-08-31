@@ -202,8 +202,8 @@
         "ar": "✓ تنفيذ دردشة في الوقت الفعلي مع WebSocket وLaravel Broadcasting"
       },
       "item4": {
-        "en": "✓ Integrated video conferencing (Agora) for telemedicine platforms",
-        "ar": "✓ تكامل مؤتمرات الفيديو (Agora) لمنصات الطب عن بُعد"
+        "en": "✓ Integrated video conferencing (Agora) for live coaching sessions",
+        "ar": "✓ تكامل مؤتمرات الفيديو (Agora) لجلسات التدريب المباشرة"
       },
       "item5": {
         "en": "✓ Built dynamic field systems and multilingual notification systems",
@@ -754,36 +754,36 @@
     },
     "pear": {
       "title": {
-        "en": "Pear: Telemedicine Platform with Video Consultations, Verified Providers & Smart Scheduling",
-        "ar": "Pear: منصة طب عن بُعد بمشاورات فيديو ومزودين موثّقين وجدولة ذكية"
+        "en": "Pear: Online Coaching & Nutrition Platform with Live Video Sessions, Verified Coaches & Smart Scheduling",
+        "ar": "Pear: منصة تدريب رياضي وتغذية أونلاين بجلسات فيديو مباشرة ومدرّبين موثّقين وجدولة ذكية"
       },
       "problem": {
-        "en": "Healthcare providers moving consultations online faced three hard problems simultaneously: securing video sessions without exposing static room credentials, preventing double-bookings across complex recurring availability schedules, and ensuring only credentialed providers could access clinical features. Standard booking and video tools don't address these together.",
-        "ar": "مقدمو الرعاية الصحية الذين ينقلون استشاراتهم إلى الإنترنت واجهوا ثلاثة مشكلات صعبة في آنٍ واحد: تأمين جلسات الفيديو دون الكشف عن بيانات اعتماد ثابتة للغرف، منع الحجوزات المتعارضة عبر جداول توفر متكررة ومعقدة، وضمان أن الميزات السريرية لا يصل إليها إلا المزودون الموثّقون. الأدوات المعتادة للحجز والفيديو لا تعالج هذه التحديات مجتمعة."
+        "en": "Fitness coaches and dietitians moving their programs online faced three hard problems at once: securing live video sessions without exposing static room credentials, preventing double-bookings across complex recurring availability schedules, and making sure only coaches whose certifications had actually been verified could take paid clients. Standard booking and video tools don't address these together.",
+        "ar": "المدرّبون الرياضيون وأخصائيو التغذية الذين ينقلون برامجهم إلى الإنترنت واجهوا ثلاث مشكلات صعبة في آنٍ واحد: تأمين جلسات الفيديو المباشرة دون الكشف عن بيانات اعتماد ثابتة للغرف، منع الحجوزات المتعارضة عبر جداول توفر متكررة ومعقدة، وضمان ألا يستقبل عملاء بمقابل مادي إلا المدرّبون الذين جرى التحقق من شهاداتهم فعلياً. الأدوات المعتادة للحجز والفيديو لا تعالج هذه التحديات مجتمعة."
       },
       "solution1": {
         "en": "Agora SDK with dynamic per-session token generation — room credentials are never static; webhook handlers track session lifecycle (join, duration, leave) for billing accuracy and session records",
         "ar": "Agora SDK مع توليد رمز ديناميكي لكل جلسة — بيانات اعتماد الغرفة ليست أبداً ثابتة؛ معالجات الـ Webhook تتتبع دورة حياة الجلسة (الدخول، المدة، الخروج) لدقة الفوترة وسجلات الجلسات"
       },
       "solution2": {
-        "en": "Two-layer scheduling: providers set recurring availability templates once; concrete time slots are generated on query and reserved atomically within a single transaction, eliminating race-condition double-bookings",
-        "ar": "جدولة ذات طبقتين: يضع المزودون قوالب التوفر المتكررة مرة واحدة؛ الفترات الزمنية الفعلية تُولَّد عند الاستعلام وتُحجز بشكل ذري ضمن معاملة واحدة، مما يُلغي الحجوزات المتعارضة الناتجة عن التزامن"
+        "en": "Two-layer scheduling: coaches set recurring availability templates once; concrete time slots are generated on query and reserved atomically within a single transaction, eliminating race-condition double-bookings",
+        "ar": "جدولة ذات طبقتين: يضع المدرّبون قوالب التوفر المتكررة مرة واحدة؛ الفترات الزمنية الفعلية تُولَّد عند الاستعلام وتُحجز بشكل ذري ضمن معاملة واحدة، مما يُلغي الحجوزات المتعارضة الناتجة عن التزامن"
       },
       "solution3": {
-        "en": "Hold-and-capture Stripe payment flow — funds held at booking, captured only when the session begins; automatic release on cancellation eliminates manual refund processing",
-        "ar": "تدفق دفع Stripe بالاحتجاز والالتقاط — الأموال محتجزة عند الحجز، وتُلتقط فقط عند بدء الجلسة؛ الإفراج التلقائي عند الإلغاء يُلغي معالجة المبالغ المستردة يدوياً"
+        "en": "Hold-and-capture Stripe payment flow — the payment intent is authorized when the client books and captured only when the coach accepts; declining, cancelling, or losing a contested slot cancels the intent and releases the hold automatically, with no manual refund processing",
+        "ar": "تدفق دفع Stripe بالاحتجاز والالتقاط — يُصرَّح بنية الدفع عند حجز العميل ولا تُلتقط إلا عند قبول المدرّب؛ والرفض أو الإلغاء أو خسارة فترة زمنية متنازع عليها يُلغي نية الدفع ويُحرِّر المبلغ المحتجز تلقائياً دون أي معالجة يدوية للمبالغ المستردة"
       },
       "solution4": {
-        "en": "Ability-based Sanctum tokens gate clinical features by document verification status — unverified providers get a restricted feature set without any code branching in controllers",
-        "ar": "رموز Sanctum القائمة على القدرات تحجب الميزات السريرية بناءً على حالة التحقق من المستندات — المزودون غير الموثّقين يحصلون على مجموعة ميزات مقيدة دون أي تفرع في الكود بمستوى المتحكمات"
+        "en": "Ability-based Sanctum tokens gate paid-client features by certification verification status — coaches whose certificates aren't approved yet get a restricted feature set without any code branching in controllers",
+        "ar": "رموز Sanctum القائمة على القدرات تحجب ميزات استقبال العملاء المدفوعين بناءً على حالة التحقق من الشهادات — المدرّبون الذين لم تُعتمد شهاداتهم بعد يحصلون على مجموعة ميزات مقيدة دون أي تفرع في الكود بمستوى المتحكمات"
       },
       "technologies": {
         "en": "Technologies:",
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "Launched telemedicine platform supporting video consultations, automated scheduling, and secure payments. Reduced admin overhead for healthcare providers.",
-        "ar": "أطلقت منصة طب عن بُعد تدعم استشارات الفيديو والجدولة الآلية والمدفوعات الآمنة. خفّضت العبء الإداري لمقدمي الرعاية الصحية."
+        "en": "Launched coaching platform supporting live video training sessions, automated scheduling, and secure payments. Reduced admin overhead for coaches and dietitians.",
+        "ar": "أطلقت منصة تدريب أونلاين تدعم جلسات التدريب بالفيديو المباشر والجدولة الآلية والمدفوعات الآمنة. خفّضت العبء الإداري على المدرّبين وأخصائيي التغذية."
       },
       "metric1": {
         "en": "Slot reservation designed to prevent double-booking",
@@ -794,12 +794,12 @@
         "ar": "توليد رموز Agora ديناميكية محددة النطاق لكل غرفة فيديو"
       },
       "metric3": {
-        "en": "Payment charged only after session completes via Stripe",
-        "ar": "الدفع يُحصّل فقط بعد اكتمال الجلسة عبر Stripe"
+        "en": "Payment captured only once the coach accepts the booking, via Stripe",
+        "ar": "الدفع لا يُحصّل إلا بعد قبول المدرّب للحجز، عبر Stripe"
       },
       "metric4": {
-        "en": "Provider features unlocked progressively via verification workflow",
-        "ar": "ميزات المزود تُفتح تدريجياً عبر سير عمل التحقق"
+        "en": "Coach features unlocked progressively via certification verification",
+        "ar": "ميزات المدرّب تُفتح تدريجياً عبر التحقق من الشهادات"
       }
     },
     "offerme": {

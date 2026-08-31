@@ -498,13 +498,13 @@
                     </button>
                 </div>
 
-                <!-- Pear - Telemedicine Platform -->
+                <!-- Pear - Online Coaching & Nutrition Platform -->
                 <div class="project-card project-card-collapsed">
                     <div class="project-screenshot">
-                        <img src="assets/images/pear.jpg" alt="Pear Telemedicine Platform" loading="lazy" width="600" height="340">
+                        <img src="assets/images/pear.jpg" alt="Pear Online Coaching &amp; Nutrition Platform" loading="lazy" width="600" height="340">
                     </div>
-                    <div class="project-icon">🏥</div>
-                    <h3 data-i18n="projects.pear.title">Pear - Telemedicine Platform</h3>
+                    <div class="project-icon">🏋️</div>
+                    <h3 data-i18n="projects.pear.title">Pear - Online Coaching &amp; Nutrition Platform</h3>
                     <div class="project-tech">
                         <span>Laravel</span>
                         <span>MySQL</span>
@@ -513,10 +513,10 @@
                     </div>
                     <div class="project-challenge">
                         <strong data-i18n="projects.cards.labels.challenge">Problem:</strong>
-                        <span data-i18n="projects.pear.problem">Telemedicine platform requiring real-time video
-                            conferencing, flexible scheduling with recurring availability patterns, secure token
-                            generation for video sessions, payment capture timing (hold-and-capture), and document
-                            verification workflow for provider onboarding.</span>
+                        <span data-i18n="projects.pear.problem">Online coaching platform for fitness coaches and
+                            dietitians, requiring live video sessions, flexible scheduling with recurring availability
+                            patterns, secure per-session token generation, payment capture timing (hold-and-capture),
+                            and a certification verification workflow before providers can take paid clients.</span>
                     </div>
                     <div class="project-details-collapsible">
                         <div class="project-solution">
@@ -527,9 +527,10 @@
                                     for secure video room access and webhook-based session tracking</li>
                                 <li data-i18n="projects.pear.solution2">Slot-based scheduling separating availability
                                     templates (recurring patterns) from concrete time slots with atomic reservation</li>
-                                <li data-i18n="projects.pear.solution3">Polymorphic session model linking sessions to
-                                    bookings or standalone events</li>
-                                <li data-i18n="projects.pear.solution4">Document verification workflow with
+                                <li data-i18n="projects.pear.solution3">Hold-and-capture Stripe flow — the payment
+                                    intent is authorized at booking and captured only when the coach accepts;
+                                    declining or cancelling releases the hold automatically</li>
+                                <li data-i18n="projects.pear.solution4">Certification verification workflow with
                                     ability-based
                                     tokens providing conditional feature access based on approval status</li>
                             </ul>
@@ -542,7 +543,7 @@
                         </div>
                         <div class="project-outcome">
                             <strong data-i18n="projects.cards.labels.outcome">Result:</strong>
-                            <span data-i18n="projects.pear.result">Launched telemedicine platform supporting video consultations, automated scheduling, and secure payments. Reduced admin overhead for healthcare providers.</span>
+                            <span data-i18n="projects.pear.result">Launched coaching platform supporting live video training sessions, automated scheduling, and secure payments. Reduced admin overhead for coaches and dietitians.</span>
                         </div>
                         <div class="project-metrics">
                             <strong data-i18n="projects.cards.labels.metrics">Key Results:</strong>
@@ -557,11 +558,11 @@
                                 </div>
                                 <div class="metric-item">
                                     <span class="metric-number">Hold → Capture</span>
-                                    <span class="metric-desc" data-i18n="projects.pear.metric3">Payment charged only after session completes via Stripe</span>
+                                    <span class="metric-desc" data-i18n="projects.pear.metric3">Payment captured only once the coach accepts the booking, via Stripe</span>
                                 </div>
                                 <div class="metric-item">
                                     <span class="metric-number">Gated access</span>
-                                    <span class="metric-desc" data-i18n="projects.pear.metric4">Provider features unlocked progressively via verification workflow</span>
+                                    <span class="metric-desc" data-i18n="projects.pear.metric4">Coach features unlocked progressively via certification verification</span>
                                 </div>
                             </div>
                         </div>
@@ -1366,7 +1367,7 @@ public MedicalRecord update(Long id, RecordDTO dto) {
                             <li data-i18n="recruiters.experience.item3">✓ Implemented real-time chat with WebSocket and
                                 Laravel Broadcasting</li>
                             <li data-i18n="recruiters.experience.item4">✓ Integrated video conferencing (Agora) for
-                                telemedicine platforms</li>
+                                live coaching sessions</li>
                             <li data-i18n="recruiters.experience.item5">✓ Built dynamic field systems and multilingual
                                 notification systems</li>
                             <li data-i18n="recruiters.experience.item6">✓ Designed commission engines and multi-currency
