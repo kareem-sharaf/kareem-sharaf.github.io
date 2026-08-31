@@ -293,8 +293,11 @@ function applyTranslations() {
             // Update text content
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translation;
-            } else if (element.tagName === 'LABEL') {
-                element.textContent = translation;
+            } else if (element.hasAttribute('data-i18n-html')) {
+                // Element's copy contains inline markup (<em>, <strong>) that carries
+                // styling. textContent would strip it, so render the markup instead.
+                // Safe because translations.json is our own same-origin content.
+                element.innerHTML = translation;
             } else {
                 element.textContent = translation;
             }

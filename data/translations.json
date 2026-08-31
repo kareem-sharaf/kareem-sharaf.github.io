@@ -16,10 +16,6 @@
       "en": "Technology",
       "ar": "التقنيات"
     },
-    "approach": {
-      "en": "Approach",
-      "ar": "المنهجية"
-    },
     "recruiters": {
       "en": "Profile",
       "ar": "الملف التقني"
@@ -39,16 +35,12 @@
   },
   "hero": {
     "mainHeadline": {
-      "en": "I Build Backend Systems That Grow Your Business",
-      "ar": "أبني أنظمة خلفية تنمّي أعمالك"
+      "en": "I Build Backend Systems That <em class=\"hero-highlight\">Grow Your Business</em>",
+      "ar": "أبني أنظمة خلفية <em class=\"hero-highlight\">تنمّي أعمالك</em>"
     },
     "subHeadline": {
       "en": "From idea to production — I design and develop reliable backend systems, APIs, and architectures that your business can depend on.",
       "ar": "من الفكرة إلى الإنتاج — أصمم وأطور أنظمة خلفية موثوقة وواجهات برمجة تطبيقات وبنى تحتية يمكن لعملك الاعتماد عليها."
-    },
-    "tagline": {
-      "en": "Polymorphic architectures · Real-time APIs · Multi-gateway payments · Performance-optimized queries",
-      "ar": "هندسة معمارية متعددة الأشكال · واجهات API فورية · بوابات دفع متعددة · استعلامات محسّنة الأداء"
     },
     "value1": {
       "en": "Systems built to handle growth without breaking",
@@ -67,61 +59,13 @@
         "en": "Start a Project →",
         "ar": "ابدأ مشروعًا ←"
       },
-      "viewResume": {
-        "en": "View Resume",
-        "ar": "عرض السيرة الذاتية"
-      },
       "getQuote": {
         "en": "Get a Quote",
         "ar": "احصل على عرض سعر"
-      },
-      "viewProjects": {
-        "en": "View Projects →",
-        "ar": "عرض المشاريع ←"
-      },
-      "getInTouch": {
-        "en": "Get In Touch",
-        "ar": "تواصل معي"
       }
-    },
-    "ctaPrimary": {
-      "en": "Discuss Your Project →",
-      "ar": "ناقش مشروعك ←"
-    },
-    "ctaSecondary": {
-      "en": "View Technical Expertise",
-      "ar": "عرض الخبرة التقنية"
-    },
-    "title": {
-      "en": "Engineering Scalable Systems",
-      "ar": "هندسة أنظمة قابلة للتوسع"
-    },
-    "subtitle": {
-      "en": "Backend Architect specializing in high-performance APIs, database design, and cloud infrastructure.",
-      "ar": "مهندس أنظمة خلفية متخصص في واجهات برمجة التطبيقات عالية الأداء وتصميم قواعد البيانات والبنية التحتية السحابية."
-    },
-    "description": {
-      "en": "Building infrastructure that powers businesses across healthcare, e-learning, travel, and marketplace domains.",
-      "ar": "بناء البنية التحتية التي تدعم الشركات في مجالات الرعاية الصحية والتعليم الإلكتروني والسفر والأسواق."
-    },
-    "scroll": {
-      "en": "Scroll",
-      "ar": "انتقل"
     }
   },
   "about": {
-    "title": {
-      "en": "About Me",
-      "ar": "نبذة عني"
-    },
-    "subtitle": {
-      "en": "Building robust digital foundations that power business growth",
-      "ar": "بناء أسس رقمية قوية تدعم نمو الأعمال"
-    },
-    "lead": {
-      "en": "I believe backend systems should be invisible yet indispensable. With 5+ production systems across healthcare, education, and e-commerce, I specialize in architecting robust, scalable solutions that handle complex business logic seamlessly.",
-      "ar": "أؤمن بأن أنظمة الخلفية يجب أن تكون غير مرئية ولكن لا غنى عنها. مع أكثر من 5 أنظمة إنتاجية في مجالات الرعاية الصحية والتعليم والتجارة الإلكترونية، أتخصص في تصميم حلول قوية وقابلة للتوسع تتعامل مع منطق الأعمال المعقد بسلاسة."
-    },
     "paragraph1": {
       "en": "As a Backend Software Engineer & Architect, I've successfully delivered enterprise-grade systems handling real-time communication, payment processing, multi-vendor architectures, and complex data workflows. My expertise spans multiple technologies including Laravel, Django, Spring Boot, and various cloud services.",
       "ar": "كمهندس برمجيات خلفية ومهندس معماري، نجحت في تقديم أنظمة على مستوى المؤسسات تتعامل مع الاتصالات في الوقت الفعلي ومعالجة المدفوعات والهندسة المعمارية متعددة البائعين وتدفقات البيانات المعقدة. تمتد خبرتي عبر تقنيات متعددة بما في ذلك Laravel وDjango وSpring Boot وخدمات السحابة المختلفة."
@@ -129,20 +73,6 @@
     "paragraph2": {
       "en": "I focus on clean code, scalable architectures, and measurable impact. Every system I build is designed with performance, security, and maintainability in mind.",
       "ar": "أركز على الكود النظيف والهندسة المعمارية القابلة للتوسع والتأثير القابل للقياس. كل نظام أقوم ببنائه مصمم مع مراعاة الأداء والأمان وسهولة الصيانة."
-    },
-    "metrics": {
-      "productionSystems": {
-        "en": "Production Systems",
-        "ar": "أنظمة إنتاجية"
-      },
-      "apiEndpoints": {
-        "en": "API Endpoints",
-        "ar": "نقاط نهاية API"
-      },
-      "uptime": {
-        "en": "Uptime",
-        "ar": "وقت التشغيل"
-      }
     }
   },
   "recruiters": {
@@ -160,28 +90,28 @@
         "ar": "المهارات التقنية الأساسية"
       },
       "item1": {
-        "en": "Backend Frameworks: Laravel, Django, Spring Boot",
-        "ar": "أطر عمل الخلفية: Laravel, Django, Spring Boot"
+        "en": "<strong>Backend Frameworks:</strong> Laravel, Django, Spring Boot",
+        "ar": "<strong>أطر عمل الخلفية:</strong> Laravel, Django, Spring Boot"
       },
       "item2": {
-        "en": "Languages: PHP, Python, Java, C++",
-        "ar": "اللغات: PHP, Python, Java, C++"
+        "en": "<strong>Languages:</strong> PHP, Python, Java, C++",
+        "ar": "<strong>اللغات:</strong> PHP, Python, Java, C++"
       },
       "item3": {
-        "en": "Databases: MySQL, PostgreSQL (Design, Optimization, Query Tuning)",
-        "ar": "قواعد البيانات: MySQL, PostgreSQL (التصميم، التحسين، ضبط الاستعلامات)"
+        "en": "<strong>Databases:</strong> MySQL, PostgreSQL (Design, Optimization, Query Tuning)",
+        "ar": "<strong>قواعد البيانات:</strong> MySQL, PostgreSQL (التصميم، التحسين، ضبط الاستعلامات)"
       },
       "item4": {
-        "en": "APIs: RESTful API Design, JWT Authentication, Laravel Sanctum",
-        "ar": "واجهات برمجة التطبيقات: تصميم RESTful API، مصادقة JWT، Laravel Sanctum"
+        "en": "<strong>APIs:</strong> RESTful API Design, JWT Authentication, Laravel Sanctum",
+        "ar": "<strong>واجهات برمجة التطبيقات:</strong> تصميم RESTful API، مصادقة JWT، Laravel Sanctum"
       },
       "item5": {
-        "en": "Real-Time: WebSocket, Laravel Broadcasting, Pusher, Agora SDK",
-        "ar": "الوقت الفعلي: WebSocket، Laravel Broadcasting، Pusher، Agora SDK"
+        "en": "<strong>Real-Time:</strong> WebSocket, Laravel Broadcasting, Pusher, Agora SDK",
+        "ar": "<strong>الوقت الفعلي:</strong> WebSocket، Laravel Broadcasting، Pusher، Agora SDK"
       },
       "item6": {
-        "en": "Payments: Stripe, PayPal, Multi-Gateway Integration",
-        "ar": "المدفوعات: Stripe، PayPal، تكامل متعدد البوابات"
+        "en": "<strong>Payments:</strong> Stripe, PayPal, Multi-Gateway Integration",
+        "ar": "<strong>المدفوعات:</strong> Stripe، PayPal، تكامل متعدد البوابات"
       }
     },
     "experience": {
@@ -295,62 +225,6 @@
       "ar": "عرض المشاريع التفصيلية"
     }
   },
-  "value": {
-    "title": {
-      "en": "How I Transform Technical Challenges into Business Solutions",
-      "ar": "كيف أحول التحديات التقنية إلى حلول أعمال"
-    },
-    "subtitle": {
-      "en": "Building systems that drive real business value and measurable results",
-      "ar": "بناء أنظمة تحقق قيمة أعمال حقيقية ونتائج قابلة للقياس"
-    },
-    "cta": {
-      "en": "Let's Build Your System →",
-      "ar": "دعنا نبني نظامك ←"
-    },
-    "card1": {
-      "title": {
-        "en": "System Architecture & Design",
-        "ar": "هندسة وتصميم الأنظمة"
-      },
-      "focus": {
-        "en": "Planning scalable systems from ground up",
-        "ar": "تخطيط أنظمة قابلة للتوسع من الصفر"
-      },
-      "benefit": {
-        "en": "Future-proof infrastructure that grows with your business without costly rewrites",
-        "ar": "بنية تحتية مستقبلية تنمو مع عملك دون إعادة كتابة مكلفة"
-      }
-    },
-    "card2": {
-      "title": {
-        "en": "Full-Cycle Development",
-        "ar": "التطوير بدورة كاملة"
-      },
-      "focus": {
-        "en": "From concept to deployment and maintenance",
-        "ar": "من المفهوم إلى النشر والصيانة"
-      },
-      "benefit": {
-        "en": "One partner for your entire technical journey - no handoffs, no delays",
-        "ar": "شريك واحد لرحلتك التقنية الكاملة - لا تسليمات، لا تأخيرات"
-      }
-    },
-    "card3": {
-      "title": {
-        "en": "Performance & Scalability",
-        "ar": "الأداء وقابلية التوسع"
-      },
-      "focus": {
-        "en": "Systems that are fast, reliable, efficient",
-        "ar": "أنظمة سريعة وموثوقة وفعالة"
-      },
-      "benefit": {
-        "en": "Optimized systems that handle growth seamlessly, reducing infrastructure costs",
-        "ar": "أنظمة محسّنة تتعامل مع النمو بسلاسة، مما يقلل تكاليف البنية التحتية"
-      }
-    }
-  },
   "technology": {
     "title": {
       "en": "Technical Environments I Work With",
@@ -431,120 +305,6 @@
       }
     }
   },
-  "skills": {
-    "title": {
-      "en": "Technical Expertise",
-      "ar": "الخبرة التقنية"
-    },
-    "groups": {
-      "backendFrameworks": {
-        "en": "Backend Frameworks",
-        "ar": "أطر عمل الخلفية"
-      },
-      "databases": {
-        "en": "Databases",
-        "ar": "قواعد البيانات"
-      },
-      "realtimeMessaging": {
-        "en": "Real-Time & Messaging",
-        "ar": "الوقت الفعلي والرسائل"
-      },
-      "paymentIntegrations": {
-        "en": "Payment & Integrations",
-        "ar": "المدفوعات والتكاملات"
-      },
-      "cloudDevops": {
-        "en": "Cloud & DevOps",
-        "ar": "السحابة وDevOps"
-      },
-      "architecturePatterns": {
-        "en": "Architecture Patterns",
-        "ar": "أنماط الهندسة المعمارية"
-      }
-    }
-  },
-  "methodology": {
-    "title": {
-      "en": "My Engineering Methodology",
-      "ar": "منهجية الهندسة الخاصة بي"
-    },
-    "subtitle": {
-      "en": "A proven process for delivering reliable solutions",
-      "ar": "عملية مثبتة لتقديم حلول موثوقة"
-    },
-    "step1": {
-      "title": {
-        "en": "Analyze & Plan",
-        "ar": "تحليل وتخطيط"
-      },
-      "item1": {
-        "en": "Understanding business objectives",
-        "ar": "فهم أهداف الأعمال"
-      },
-      "item2": {
-        "en": "Technical requirements gathering",
-        "ar": "جمع المتطلبات التقنية"
-      },
-      "item3": {
-        "en": "System architecture planning",
-        "ar": "تخطيط هندسة الأنظمة"
-      }
-    },
-    "step2": {
-      "title": {
-        "en": "Design & Architect",
-        "ar": "التصميم والهندسة"
-      },
-      "item1": {
-        "en": "Database design and optimization",
-        "ar": "تصميم وتحسين قواعد البيانات"
-      },
-      "item2": {
-        "en": "API structure and integration planning",
-        "ar": "هيكل API وتخطيط التكامل"
-      },
-      "item3": {
-        "en": "Scalability considerations",
-        "ar": "اعتبارات قابلية التوسع"
-      }
-    },
-    "step3": {
-      "title": {
-        "en": "Build & Implement",
-        "ar": "البناء والتنفيذ"
-      },
-      "item1": {
-        "en": "Clean, maintainable code",
-        "ar": "كود نظيف وقابل للصيانة"
-      },
-      "item2": {
-        "en": "Third-party integrations",
-        "ar": "تكاملات الطرف الثالث"
-      },
-      "item3": {
-        "en": "Real-time features when needed",
-        "ar": "ميزات الوقت الفعلي عند الحاجة"
-      }
-    },
-    "step4": {
-      "title": {
-        "en": "Deploy & Optimize",
-        "ar": "النشر والتحسين"
-      },
-      "item1": {
-        "en": "Performance tuning",
-        "ar": "ضبط الأداء"
-      },
-      "item2": {
-        "en": "Monitoring and maintenance",
-        "ar": "المراقبة والصيانة"
-      },
-      "item3": {
-        "en": "Ongoing optimization",
-        "ar": "التحسين المستمر"
-      }
-    }
-  },
   "projects": {
     "title": {
       "en": "Selected System Implementations",
@@ -553,50 +313,6 @@
     "subtitle": {
       "en": "Real solutions for real business challenges",
       "ar": "حلول حقيقية لتحديات أعمال حقيقية"
-    },
-    "viewDetails": {
-      "en": "View Details",
-      "ar": "عرض التفاصيل"
-    },
-    "filters": {
-      "all": {
-        "en": "All Projects",
-        "ar": "جميع المشاريع"
-      },
-      "healthcare": {
-        "en": "Healthcare",
-        "ar": "الرعاية الصحية"
-      },
-      "education": {
-        "en": "Education",
-        "ar": "التعليم"
-      },
-      "travel": {
-        "en": "Travel",
-        "ar": "السفر"
-      },
-      "marketplace": {
-        "en": "Marketplace",
-        "ar": "السوق"
-      }
-    },
-    "badges": {
-      "healthcare": {
-        "en": "Healthcare",
-        "ar": "الرعاية الصحية"
-      },
-      "education": {
-        "en": "Education",
-        "ar": "التعليم"
-      },
-      "travel": {
-        "en": "Travel",
-        "ar": "السفر"
-      },
-      "marketplace": {
-        "en": "Marketplace",
-        "ar": "السوق"
-      }
     },
     "jaramana": {
       "title": {
@@ -870,135 +586,15 @@
           "en": "Key Results:",
           "ar": "النتائج الرئيسية:"
         }
-      },
-      "healthcare": {
-        "title": {
-          "en": "Healthcare Management System",
-          "ar": "نظام إدارة الرعاية الصحية"
-        },
-        "challenge": {
-          "en": "Clinic struggling with manual processes and patient scheduling",
-          "ar": "عيادة تعاني من العمليات اليدوية وجدولة المرضى"
-        },
-        "solution1": {
-          "en": "Automated appointment booking system",
-          "ar": "نظام حجز مواعيد آلي"
-        },
-        "solution2": {
-          "en": "Integrated medical records management",
-          "ar": "إدارة متكاملة للسجلات الطبية"
-        },
-        "solution3": {
-          "en": "Real-time notifications and chat",
-          "ar": "إشعارات ودردشة في الوقت الفعلي"
-        },
-        "outcome1": {
-          "en": "Reduced admin time by",
-          "ar": "تقليل وقت الإدارة بنسبة"
-        },
-        "outcome2": {
-          "en": "improved patient satisfaction by",
-          "ar": "تحسين رضا المرضى بنسبة"
-        }
-      },
-      "elearning": {
-        "title": {
-          "en": "E-Learning Platform",
-          "ar": "منصة التعلم الإلكتروني"
-        },
-        "challenge": {
-          "en": "University needed scalable course management system",
-          "ar": "الجامعة تحتاج نظام إدارة دورات قابل للتوسع"
-        },
-        "solution1": {
-          "en": "Resumable video upload system",
-          "ar": "نظام رفع فيديو قابل للاستئناف"
-        },
-        "solution2": {
-          "en": "Progress tracking and assessments",
-          "ar": "تتبع التقدم والتقييمات"
-        },
-        "solution3": {
-          "en": "Role-based access control",
-          "ar": "التحكم في الوصول القائم على الأدوار"
-        },
-        "outcome1": {
-          "en": "Enabled structured online learning for",
-          "ar": "تمكين التعلم الإلكتروني المنظم لـ"
-        },
-        "outcome1Students": {
-          "en": "students",
-          "ar": "طالب"
-        },
-        "outcome2": {
-          "en": "increased course completion rate by",
-          "ar": "زيادة معدل إتمام الدورة بنسبة"
-        }
-      },
-      "travel": {
-        "title": {
-          "en": "Multi-Vendor Travel Marketplace",
-          "ar": "سوق سفر متعدد البائعين"
-        },
-        "challenge": {
-          "en": "Unified booking system for diverse travel services",
-          "ar": "نظام حجز موحد لخدمات السفر المتنوعة"
-        },
-        "solution1": {
-          "en": "Polymorphic booking architecture",
-          "ar": "هندسة معمارية للحجز متعددة الأشكال"
-        },
-        "solution2": {
-          "en": "Multi-currency and commission system",
-          "ar": "نظام متعدد العملات والعمولات"
-        },
-        "solution3": {
-          "en": "Dynamic pricing engine",
-          "ar": "محرك تسعير ديناميكي"
-        },
-        "outcome1": {
-          "en": "One-stop booking experience across",
-          "ar": "تجربة حجز شاملة عبر"
-        },
-        "outcome1Types": {
-          "en": "service types",
-          "ar": "نوع خدمة"
-        },
-        "outcome2": {
-          "en": "increased platform performance by",
-          "ar": "زيادة أداء المنصة بنسبة"
-        }
-      },
-      "marketplace": {
-        "title": {
-          "en": "B2B Service Marketplace",
-          "ar": "سوق خدمات B2B"
-        },
-        "challenge": {
-          "en": "Connecting service providers with clients efficiently",
-          "ar": "ربط مقدمي الخدمات بالعملاء بكفاءة"
-        },
-        "solution1": {
-          "en": "Real-time chat and notifications",
-          "ar": "دردشة وإشعارات في الوقت الفعلي"
-        },
-        "solution2": {
-          "en": "Dynamic field system for categories",
-          "ar": "نظام حقول ديناميكي للفئات"
-        },
-        "solution3": {
-          "en": "Multilingual support",
-          "ar": "دعم متعدد اللغات"
-        },
-        "outcome1": {
-          "en": "Reduced time-to-contract by",
-          "ar": "تقليل وقت التعاقد بنسبة"
-        },
-        "outcome2": {
-          "en": "increased conversion rate by",
-          "ar": "زيادة معدل التحويل بنسبة"
-        }
       }
+    },
+    "viewDetailsExpand": {
+      "en": "View Details →",
+      "ar": "عرض التفاصيل ←"
+    },
+    "viewDetailsCollapse": {
+      "en": "Show Less ↑",
+      "ar": "إظهار أقل ↑"
     }
   },
   "contact": {
@@ -1011,8 +607,8 @@
       "ar": "صِف ما تحتاجه وسأعود إليك بسرعة."
     },
     "description": {
-      "en": "Whether you're starting from scratch or optimizing existing systems, I'm here to help you build scalable solutions that drive business growth. Free consultation available to discuss your project needs.",
-      "ar": "سواء كنت تبدأ من الصفر أو تحسن الأنظمة الموجودة، أنا هنا لمساعدتك في بناء حلول قابلة للتوسع تدفع نمو الأعمال. استشارة مجانية متاحة لمناقشة احتياجات مشروعك."
+      "en": "Whether you're starting from scratch or optimizing existing systems, I'm here to help you build scalable solutions that drive business growth. <strong>Free consultation available</strong> to discuss your project needs.",
+      "ar": "سواء كنت تبدأ من الصفر أو تحسن الأنظمة الموجودة، أنا هنا لمساعدتك في بناء حلول قابلة للتوسع تدفع نمو الأعمال. <strong>استشارة مجانية متاحة</strong> لمناقشة احتياجات مشروعك."
     },
     "benefit1": {
       "en": "Full-cycle development from concept to deployment",
@@ -1120,10 +716,6 @@
       "title": {
         "en": "Email",
         "ar": "البريد الإلكتروني"
-      },
-      "label": {
-        "en": "Email",
-        "ar": "البريد الإلكتروني"
       }
     },
     "linkedin": {
@@ -1131,9 +723,9 @@
         "en": "Connect professionally",
         "ar": "تواصل بشكل احترافي"
       },
-      "link": {
-        "en": "Connect with me",
-        "ar": "تواصل معي"
+      "title": {
+        "en": "LinkedIn",
+        "ar": "LinkedIn"
       }
     },
     "github": {
@@ -1141,10 +733,14 @@
         "en": "View my code and projects",
         "ar": "عرض الكود والمشاريع"
       },
-      "link": {
-        "en": "View my work",
-        "ar": "عرض أعمالي"
+      "title": {
+        "en": "GitHub",
+        "ar": "GitHub"
       }
+    },
+    "formSendError": {
+      "en": "Failed to send message. Please try again or email kareem.sh.ite@gmail.com directly.",
+      "ar": "تعذّر إرسال الرسالة. حاول مجدداً أو راسلني مباشرة على kareem.sh.ite@gmail.com"
     }
   },
   "whatsapp": {
@@ -1441,12 +1037,6 @@
         "en": "pricing, payment, and commission — each testable independently",
         "ar": "التسعير والدفع والعمولة — كل منها قابل للاختبار بشكل مستقل"
       }
-    }
-  },
-  "modal": {
-    "close": {
-      "en": "Close",
-      "ar": "إغلاق"
     }
   },
   "services": {
