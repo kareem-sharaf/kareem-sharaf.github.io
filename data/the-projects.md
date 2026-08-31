@@ -72,11 +72,11 @@ The multilingual notification system ensures all users receive updates in their 
 
 
 المشروع الثاني
-# Pear - Online Coaching & Nutrition Platform
+# Pear - Coaching & Clubs Platform
 
 ## Project Purpose
 
-Pear is an online coaching platform that connects certified fitness coaches and dietitians with clients for remote training and nutrition sessions. Providers register under one of two roles (coach or dietitian), publish the specialties they train in with a price per specialty, and define the weekly hours they are available. Clients browse providers by specialty, book a session on a concrete time slot, and meet over live video. Each booking carries a client intake profile — weight, height, allergies and previous injuries, plus notes and attachments — so the coach or dietitian can tailor the program before the session starts. The platform serves independent coaches and nutrition specialists delivering their programs remotely, and clients who want structured training and diet guidance without being tied to a gym location.
+Pear is an online coaching platform that connects certified fitness coaches, dietitians and clubs with members for remote training and nutrition sessions. Providers register under one of two roles (coach or dietitian), publish the specialties they train in with a price per specialty, and define the weekly hours they are available. Clients browse providers by specialty, book a session on a concrete time slot, and meet over live video. Each booking carries a client intake profile — weight, height, allergies and previous injuries, plus notes and attachments — so the coach or dietitian can tailor the program before the session starts. The platform serves independent coaches and nutrition specialists delivering their programs remotely, and clients who want structured training and diet guidance without being tied to a gym location.
 
 ## System Scope
 

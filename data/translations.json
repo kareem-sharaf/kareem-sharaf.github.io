@@ -31,6 +31,10 @@
     "contact": {
       "en": "Contact",
       "ar": "اتصل بي"
+    },
+    "experience": {
+      "en": "Experience",
+      "ar": "الخبرة"
     }
   },
   "hero": {
@@ -303,6 +307,16 @@
         "en": "Version control and collaboration",
         "ar": "التحكم بالإصدارات والتعاون"
       }
+    },
+    "practices": {
+      "title": {
+        "en": "Practices",
+        "ar": "ممارسات"
+      },
+      "description": {
+        "en": "How the code stays reliable as it grows",
+        "ar": "كيف يبقى الكود موثوقاً مع نموّه"
+      }
     }
   },
   "projects": {
@@ -470,12 +484,12 @@
     },
     "pear": {
       "title": {
-        "en": "Pear: Online Coaching & Nutrition Platform with Live Video Sessions, Verified Coaches & Smart Scheduling",
-        "ar": "Pear: منصة تدريب رياضي وتغذية أونلاين بجلسات فيديو مباشرة ومدرّبين موثّقين وجدولة ذكية"
+        "en": "Pear: Coaching & Clubs Platform with Live Video Sessions, Verified Coaches & Smart Scheduling",
+        "ar": "Pear: منصة تدريب وأندية بجلسات فيديو مباشرة ومدرّبين موثّقين وجدولة ذكية"
       },
       "problem": {
-        "en": "Fitness coaches and dietitians moving their programs online faced three hard problems at once: securing live video sessions without exposing static room credentials, preventing double-bookings across complex recurring availability schedules, and making sure only coaches whose certifications had actually been verified could take paid clients. Standard booking and video tools don't address these together.",
-        "ar": "المدرّبون الرياضيون وأخصائيو التغذية الذين ينقلون برامجهم إلى الإنترنت واجهوا ثلاث مشكلات صعبة في آنٍ واحد: تأمين جلسات الفيديو المباشرة دون الكشف عن بيانات اعتماد ثابتة للغرف، منع الحجوزات المتعارضة عبر جداول توفر متكررة ومعقدة، وضمان ألا يستقبل عملاء بمقابل مادي إلا المدرّبون الذين جرى التحقق من شهاداتهم فعلياً. الأدوات المعتادة للحجز والفيديو لا تعالج هذه التحديات مجتمعة."
+        "en": "Coaches, dietitians and clubs moving their programs online faced three hard problems at once: securing live video sessions without exposing static room credentials, preventing double-bookings across complex recurring availability schedules, and making sure only providers whose certifications had actually been verified could take paying members. Standard booking and video tools don’t address these together.",
+        "ar": "المدرّبون وأخصائيو التغذية والأندية الذين ينقلون برامجهم إلى الإنترنت واجهوا ثلاث مشكلات صعبة في آنٍ واحد: تأمين جلسات الفيديو المباشرة دون الكشف عن بيانات اعتماد ثابتة للغرف، منع الحجوزات المتعارضة عبر جداول توفر متكررة ومعقدة، وضمان ألا يستقبل أعضاءً بمقابل مادي إلا المزودون الذين جرى التحقق من شهاداتهم فعلياً. الأدوات المعتادة للحجز والفيديو لا تعالج هذه التحديات مجتمعة."
       },
       "solution1": {
         "en": "Agora SDK with dynamic per-session token generation — room credentials are never static; webhook handlers track session lifecycle (join, duration, leave) for billing accuracy and session records",
@@ -498,8 +512,8 @@
         "ar": "التقنيات:"
       },
       "result": {
-        "en": "Launched coaching platform supporting live video training sessions, automated scheduling, and secure payments. Reduced admin overhead for coaches and dietitians.",
-        "ar": "أطلقت منصة تدريب أونلاين تدعم جلسات التدريب بالفيديو المباشر والجدولة الآلية والمدفوعات الآمنة. خفّضت العبء الإداري على المدرّبين وأخصائيي التغذية."
+        "en": "Launched coaching platform supporting live video sessions for individuals and clubs, automated scheduling, and secure payments. Reduced admin overhead for coaches and dietitians.",
+        "ar": "أطلقت منصة تدريب تدعم جلسات الفيديو المباشرة للأفراد والأندية والجدولة الآلية والمدفوعات الآمنة. خفّضت العبء الإداري على المدرّبين وأخصائيي التغذية."
       },
       "metric1": {
         "en": "Slot reservation designed to prevent double-booking",
@@ -751,8 +765,8 @@
   },
   "footer": {
     "tagline": {
-      "en": "Backend Architect & System Engineer",
-      "ar": "مهندس معماري للأنظمة الخلفية"
+      "en": "Software Engineer & Backend Developer",
+      "ar": "مهندس برمجيات ومطور أنظمة خلفية"
     }
   },
   "mindset": {
@@ -1162,6 +1176,172 @@
       "button": {
         "en": "Let's Talk",
         "ar": "لنتحدث"
+      }
+    }
+  },
+  "experience": {
+    "title": {
+      "en": "Professional Experience",
+      "ar": "الخبرة المهنية"
+    },
+    "subtitle": {
+      "en": "Production systems delivered for teams across the UAE, Türkiye and Syria",
+      "ar": "أنظمة إنتاجية سُلّمت لفرق في الإمارات وتركيا وسوريا"
+    },
+    "current": {
+      "en": "Current",
+      "ar": "حالياً"
+    },
+    "educationTitle": {
+      "en": "Education",
+      "ar": "التعليم"
+    },
+    "degree": {
+      "en": "B.Eng. Information Technology Engineering",
+      "ar": "بكالوريوس هندسة تقانة المعلومات"
+    },
+    "track": {
+      "en": "Software Engineering track",
+      "ar": "اختصاص هندسة البرمجيات"
+    },
+    "school": {
+      "en": "Damascus University — Faculty of ITE",
+      "ar": "جامعة دمشق — كلية الهندسة المعلوماتية"
+    },
+    "eduDetail": {
+      "en": "4th year · Expected graduation 2026",
+      "ar": "السنة الرابعة · التخرّج المتوقع 2026"
+    },
+    "illaftrain": {
+      "role": {
+        "en": "Software Engineer",
+        "ar": "مهندس برمجيات"
+      },
+      "org": {
+        "en": "ILLAFTrain",
+        "ar": "ILLAFTrain"
+      },
+      "period": {
+        "en": "Jan 2026 – Present",
+        "ar": "يناير 2026 – الآن"
+      },
+      "location": {
+        "en": "United Arab Emirates · Remote · Full-time",
+        "ar": "الإمارات العربية المتحدة · عن بُعد · دوام كامل"
+      },
+      "p1": {
+        "en": "Build and maintain production backend systems in Laravel, with Filament admin panels.",
+        "ar": "بناء وصيانة أنظمة خلفية إنتاجية بـ Laravel مع لوحات إدارة Filament."
+      },
+      "p2": {
+        "en": "Apply AI-assisted development workflows to accelerate delivery while safeguarding code quality.",
+        "ar": "توظيف سير عمل تطوير مدعوم بالذكاء الاصطناعي لتسريع التسليم مع الحفاظ على جودة الكود."
+      },
+      "p3": {
+        "en": "Write unit tests to ensure reliability and prevent regressions across releases.",
+        "ar": "كتابة اختبارات وحدة لضمان الموثوقية ومنع الانحدارات بين الإصدارات."
+      },
+      "p4": {
+        "en": "Design and optimize database schemas and queries for performance at scale.",
+        "ar": "تصميم وتحسين مخططات قواعد البيانات والاستعلامات للأداء عند التوسّع."
+      }
+    },
+    "onedoor": {
+      "role": {
+        "en": "Full-Stack Developer",
+        "ar": "مطوّر Full-Stack"
+      },
+      "org": {
+        "en": "Onedoor",
+        "ar": "Onedoor"
+      },
+      "period": {
+        "en": "May 2025 – Oct 2025",
+        "ar": "مايو 2025 – أكتوبر 2025"
+      },
+      "location": {
+        "en": "Türkiye · Remote · Full-time",
+        "ar": "تركيا · عن بُعد · دوام كامل"
+      },
+      "p1": {
+        "en": "Delivered full-stack web features end to end using Django and Python in a fully remote team.",
+        "ar": "تسليم ميزات ويب متكاملة من الطرف إلى الطرف باستخدام Django وPython ضمن فريق يعمل عن بُعد بالكامل."
+      },
+      "p2": {
+        "en": "Designed and built RESTful APIs and integrated third-party services.",
+        "ar": "تصميم وبناء واجهات RESTful وتكامل خدمات خارجية."
+      },
+      "p3": {
+        "en": "Collaborated across time zones to ship features and resolve technical issues on schedule.",
+        "ar": "التعاون عبر فروق التوقيت لإطلاق الميزات وحل المشكلات التقنية في مواعيدها."
+      }
+    },
+    "helium": {
+      "role": {
+        "en": "Backend Developer",
+        "ar": "مطوّر أنظمة خلفية"
+      },
+      "org": {
+        "en": "Helium Cloud",
+        "ar": "Helium Cloud"
+      },
+      "period": {
+        "en": "Jan 2025",
+        "ar": "يناير 2025"
+      },
+      "location": {
+        "en": "Freelance · Remote",
+        "ar": "عمل حر · عن بُعد"
+      },
+      "p1": {
+        "en": "Delivered custom backend solutions with Laravel for a range of client projects.",
+        "ar": "تسليم حلول خلفية مخصصة بـ Laravel لمجموعة من مشاريع العملاء."
+      },
+      "p2": {
+        "en": "Built scalable, well-structured applications following best coding practices.",
+        "ar": "بناء تطبيقات قابلة للتوسّع وجيدة البنية وفق أفضل الممارسات البرمجية."
+      },
+      "p3": {
+        "en": "Performed database analysis and optimized queries for high performance.",
+        "ar": "تحليل قواعد البيانات وتحسين الاستعلامات لأداء عالٍ."
+      },
+      "p4": {
+        "en": "Gathered requirements directly from clients and provided technical recommendations.",
+        "ar": "جمع المتطلبات مباشرة من العملاء وتقديم التوصيات التقنية."
+      }
+    },
+    "sanabel": {
+      "role": {
+        "en": "Full-Stack Developer",
+        "ar": "مطوّر Full-Stack"
+      },
+      "org": {
+        "en": "Sanabel",
+        "ar": "Sanabel"
+      },
+      "period": {
+        "en": "Dec 2024",
+        "ar": "ديسمبر 2024"
+      },
+      "location": {
+        "en": "On-site",
+        "ar": "حضورياً"
+      },
+      "p1": {
+        "en": "Developed and maintained web applications using Laravel, Blade, and Vue.js.",
+        "ar": "تطوير وصيانة تطبيقات ويب باستخدام Laravel وBlade وVue.js."
+      },
+      "p2": {
+        "en": "Applied SOLID principles and clean architecture for maintainable, scalable systems.",
+        "ar": "تطبيق مبادئ SOLID والمعمارية النظيفة لأنظمة قابلة للصيانة والتوسّع."
+      },
+      "p3": {
+        "en": "Designed and optimized database structures, improving performance and reliability.",
+        "ar": "تصميم وتحسين هياكل قواعد البيانات بما رفع الأداء والموثوقية."
+      },
+      "p4": {
+        "en": "Collaborated with the team to integrate APIs and enhance features.",
+        "ar": "التعاون مع الفريق لتكامل الواجهات وتحسين الميزات."
       }
     }
   }
