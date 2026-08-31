@@ -421,7 +421,6 @@
                     </div>
                     <button class="project-toggle-btn">
                         <span class="toggle-text-expand" data-i18n="projects.viewDetailsExpand">View Details →</span>
-                        <span class="toggle-text-collapse" data-i18n="projects.viewDetailsCollapse">Show Less ↑</span>
                     </button>
                 </div>
 
@@ -494,7 +493,6 @@
                     </div>
                     <button class="project-toggle-btn">
                         <span class="toggle-text-expand" data-i18n="projects.viewDetailsExpand">View Details →</span>
-                        <span class="toggle-text-collapse" data-i18n="projects.viewDetailsCollapse">Show Less ↑</span>
                     </button>
                 </div>
 
@@ -569,7 +567,6 @@
                     </div>
                     <button class="project-toggle-btn">
                         <span class="toggle-text-expand" data-i18n="projects.viewDetailsExpand">View Details →</span>
-                        <span class="toggle-text-collapse" data-i18n="projects.viewDetailsCollapse">Show Less ↑</span>
                     </button>
                 </div>
 
@@ -645,7 +642,6 @@
                     </div>
                     <button class="project-toggle-btn">
                         <span class="toggle-text-expand" data-i18n="projects.viewDetailsExpand">View Details →</span>
-                        <span class="toggle-text-collapse" data-i18n="projects.viewDetailsCollapse">Show Less ↑</span>
                     </button>
                 </div>
 
@@ -724,7 +720,6 @@
                     </div>
                     <button class="project-toggle-btn">
                         <span class="toggle-text-expand" data-i18n="projects.viewDetailsExpand">View Details →</span>
-                        <span class="toggle-text-collapse" data-i18n="projects.viewDetailsCollapse">Show Less ↑</span>
                     </button>
                 </div>
             </div>
@@ -1598,6 +1593,17 @@ public MedicalRecord update(Long id, RecordDTO dto) {
             </div>
         </div>
     </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="project-modal" id="projectModal" hidden>
+        <div class="project-modal__backdrop" data-modal-close></div>
+        <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"
+            tabindex="-1">
+            <button type="button" class="project-modal__close" data-modal-close aria-label="Close"
+                data-i18n-aria="projects.modalClose">&times;</button>
+            <div class="project-modal__body" id="projectModalBody"></div>
+        </div>
+    </div>
 
     <script src="js/script.js" defer></script>
     <script src="js/technical-background.js" defer></script>

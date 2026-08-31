@@ -592,9 +592,9 @@
       "en": "View Details →",
       "ar": "عرض التفاصيل ←"
     },
-    "viewDetailsCollapse": {
-      "en": "Show Less ↑",
-      "ar": "إظهار أقل ↑"
+    "modalClose": {
+      "en": "Close details",
+      "ar": "إغلاق التفاصيل"
     }
   },
   "contact": {

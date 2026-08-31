@@ -304,6 +304,15 @@ function applyTranslations() {
         }
     });
     
+    // Translate accessible names (icon-only controls carry no visible text)
+    document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+        const key = element.getAttribute('data-i18n-aria');
+        const translation = getTranslation(key);
+        if (translation && translation !== key) {
+            element.setAttribute('aria-label', translation);
+        }
+    });
+
     // Translate placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
@@ -359,29 +368,91 @@ if (currentLang !== 'en') {
 
 
 // ============================================
-// Project Cards Toggle (Expand/Collapse)
+// Project Detail Modal
 // ============================================
+const FOCUSABLE = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
 function initProjectCardsToggle() {
+    const modal = document.getElementById('projectModal');
+    const body = document.getElementById('projectModalBody');
+    if (!modal || !body) return;
+
+    const dialog = modal.querySelector('.project-modal__dialog');
+    let lastTrigger = null;
+
+    function openModal(card, trigger) {
+        lastTrigger = trigger;
+        body.innerHTML = '';
+
+        // Clone the card's content so the grid copy stays untouched. The clone
+        // already carries the active language, and its data-i18n attributes come
+        // along so a later language switch reaches it too.
+        Array.from(card.children).forEach(child => {
+            if (child.classList.contains('project-toggle-btn')) return;
+            body.appendChild(child.cloneNode(true));
+        });
+
+        // The dialog is labelled by the project title.
+        const heading = body.querySelector('h3');
+        if (heading) heading.id = 'projectModalTitle';
+
+        // Screenshots in the grid are lazy; inside the dialog they are needed now.
+        body.querySelectorAll('img[loading="lazy"]').forEach(img => img.removeAttribute('loading'));
+
+        modal.hidden = false;
+        document.body.classList.add('modal-open');
+        body.scrollTop = 0;
+        (modal.querySelector('.project-modal__close') || dialog).focus();
+    }
+
+    function closeModal() {
+        if (modal.hidden) return;
+        modal.hidden = true;
+        document.body.classList.remove('modal-open');
+        body.innerHTML = '';
+        if (lastTrigger) {
+            lastTrigger.focus();
+            lastTrigger = null;
+        }
+    }
+
     document.querySelectorAll('.project-toggle-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
             e.stopPropagation();
             const card = this.closest('.project-card');
-            if (card) {
-                card.classList.toggle('project-card-collapsed');
-                
-                // Smooth scroll to card if expanding
-                if (!card.classList.contains('project-card-collapsed')) {
-                    setTimeout(() => {
-                        const cardTop = card.getBoundingClientRect().top + window.pageYOffset;
-                        const headerOffset = 100;
-                        window.scrollTo({
-                            top: cardTop - headerOffset,
-                            behavior: 'smooth'
-                        });
-                    }, 100);
-                }
-            }
+            if (card) openModal(card, this);
         });
+    });
+
+    modal.querySelectorAll('[data-modal-close]').forEach(el => {
+        el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', e => {
+        if (modal.hidden) return;
+
+        if (e.key === 'Escape') {
+            closeModal();
+            return;
+        }
+
+        // Keep Tab inside the dialog while it is open.
+        if (e.key === 'Tab') {
+            const items = Array.from(dialog.querySelectorAll(FOCUSABLE))
+                .filter(el => el.offsetParent !== null);
+            if (!items.length) return;
+
+            const first = items[0];
+            const last = items[items.length - 1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
     });
 }
 
